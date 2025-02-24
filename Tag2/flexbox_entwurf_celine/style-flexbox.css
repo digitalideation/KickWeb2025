@@ -1,0 +1,79 @@
+body {
+  height: 100vh;
+  font-family: "coolvetica", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#graphis {
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  align-items: flex-start; 
+}
+.container p {
+  margin: 0;
+  padding: 0;
+}
+.container div {
+  height: 100%;
+}
+.row1 {
+  height: 40vh;
+}
+.row2 {
+  height: 35vh;
+}
+.row3 {
+  height: 25vh;
+}
+.letterG, .letterR, .letterA, .letterP, .letterH, .letterI, .letterS {
+  font-size: 45rem;
+  line-height: 0.35;
+}
+.graphis {
+  font-size: 6rem;
+  line-height: 1;
+}
+.number {
+  font-size: 3rem;
+}
+.containerGR {
+  background-color: green;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  width: 70%;
+  display: flex;
+}
+p.letterG {
+  letter-spacing: -2rem;
+  margin-left: -30%;
+}
+.containerA {
+  background-color: yellow;
+  width: 30%;
+}
+p.letterA {
+  margin-left: 30%;
+  margin-top: -45%;
+}
+.empty {
+  background-color: pink;
+  width: 20%;
+}
+.containerP {
+  background-color: rgb(105, 208, 156);
+  width: 55%;
+}
+.containerH {
+  background-color: blue;
+  width: 25%;
+}
+.containerI {
+  background-color: violet;
+  width: 15%;
+}
+.containerS {
+  background-color: coral;
+  width: 60%;
+}

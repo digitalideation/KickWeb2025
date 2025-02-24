@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+
+body{
+    font-family: 'Roboto';
+    background-color: #666666;
+    display: flex;
+    justify-content: center;
+}
+
+#plakat{
+    background-color: #fff; 
+    width:60vw;
+    /*Proportionen A-Formate 1.4141--*/
+    height:84vw;
+}
+
+div.dotrow {
+    background-color: #e4007b;
+    padding: 3em;
+   /*---Tipp mit flexbox arbeiten --*/
+}
+
+.dot {
+    border-radius: 50%;
+    height: 150px;
+    background-color: #fff;
+    margin: 5px;
+}
