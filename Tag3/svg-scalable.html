@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Scalable in Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 200px;
+            grid-template-rows: 1fr 1fr 200px;
+           
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+        div.scalesvg{
+            grid-column:2/3 ;
+            grid-row: 2/3;
+            
+        }
+        div.fix{
+            grid-column:3/4;
+            grid-row: 3/4;
+            background-color: lightblue;
+        }
+        div.fraction{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-color: lightpink;
+        }
+    </style>
+
+</head>
+<!-- SVG Scalable in Grid, svg Element ohne Attribute width, height einbinden und per css width und height setzen -->
+<body>
+    <div class="grid-container">
+        <div class="scalesvg">
+            <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 89.86 88.73">
+                
+                <path class="cls-1" d="M89.72,0v9.42H9.42l.07,29.74,67.01-.21v9.42l-66.94.21.07,30.73h80.23v9.42H.21L0,0h89.72Z"/>
+              </svg>
+        </div>
+        <div class="fraction">
+            Fraction/Fraction
+        </div>
+        <div class="fix">
+            200/200px
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        .text {
+            font-family: "Red Hat Display", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 5rem;
+        }
+
+        .hochgestellt {
+           
+            border: 1px solid blue;
+            padding: 1rem;
+            writing-mode: sideways-lr;
+            /* vertical-lr wäre von oben nach unten – weitere Optionen siehe https://developer.mozilla.org/de/docs/Web/CSS/writing-mode */
+        }
+
+        .normal {
+            
+            border: 1px solid blue;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="hochgestellt text">
+            Typographie
+        </div>
+        <div class="normal text">
+            Typographie
+        </div>
+    </div>
+</body>
+
+</html>
