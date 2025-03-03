@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Font Scalable in Grid</title>
+
+    <style>
+        @import url("https://use.typekit.net/ldq0wjc.css");
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 200px;
+            grid-template-rows: 1fr 1fr 200px;
+            height:100vh;
+        }
+
+        .text {
+            --fontStretch: 150;
+            --fontSize: 20rem;
+            font-family: "antipol-variable", sans-serif;
+            font-variation-settings: "wdth" var(--fontStretch);
+            /* wdth 100-250 */
+            font-size: var(--fontSize);
+            height: var(--fontSize);
+            display: inline-block;
+            border:1px solid black;
+        }
+
+        div.scalefont {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            background-color: lightskyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        div.fix{
+            grid-column:3/4;
+            grid-row: 3/4;
+            background-color: lightblue;
+        }
+        div.fraction{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="scalefont">
+            <div id="scale" class="text">E</div>
+        </div>
+        <div class="fraction">
+            Fraction/Fraction
+        </div>
+        <div class="fix">
+            200/200px
+        </div>
+    </div>
+
+    <script>
+        //https://medium.com/@mandy.michael/resize-text-to-fit-the-parent-with-variable-font-width-axis-16921b6687ae
+        const text = document.getElementById("scale");
+
+       
+        function resetText() {
+            const parentContainerWidth = text.parentNode.clientWidth;
+            const parentContainerHeight = text.parentNode.clientHeight;
+            const currentTextWidth = text.scrollWidth;
+            const currentFontStretch = parseInt(window.getComputedStyle(text).fontStretch);
+
+            /* font-stretch abhängig von Zellbreite */
+            let newStretchValue = (parentContainerWidth / currentTextWidth) * currentFontStretch;
+            newStretchValue = Math.floor(Math.min(Math.max(100, newStretchValue), 250));
+            text.style.setProperty('--fontStretch', newStretchValue);
+
+            /* font-size abhängig von Zellhoehe */
+            const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
+            let newFontValue=Math.floor((parentContainerHeight-40)/16);
+
+            text.style.setProperty('--fontSize', newFontValue + 'rem');
+
+            //console.log('parent: ' + parentContainerWidth + ' textwidth: ' + currentTextWidth + ' stretch: ' +newStretchValue);
+        };
+
+        window.onresize = resetText;
+        resetText();
+    </script>
+</body>
+
+</html>
