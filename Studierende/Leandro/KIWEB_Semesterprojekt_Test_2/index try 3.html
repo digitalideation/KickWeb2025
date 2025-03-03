@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d room</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000000;
+        }
+        .scene {
+            perspective: 1800px;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .room {
+            width: 90vh;
+            height: 90vh;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+            transition: transform 1s ease-in-out;
+            position: relative;
+        }
+        .wall {
+            position: absolute;
+            width: 90vh;
+            height: 90vh;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            backface-visibility: hidden;
+        }
+
+        .front {
+            transform: translateZ(-40vw);
+        }
+        .back {
+            transform: translateZ(40vw);
+        }
+        .left {
+            transform: translateX(-40vw) rotateY(90deg) translateZ(0);
+        }
+        .right {
+            transform: translateX(40vw) rotateY(-90deg) translateZ(0);
+        }
+        .top {
+            transform: translateY(-50vh) rotateX(-90deg) translateZ(0);
+        }
+        .bottom {
+            transform: translateY(50vh) rotateX(90deg) translateZ(0);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="room" id="room">
+
+            <!--<div class="wall front" onclick="rotateRoom(0, 180)">Front</div>
+            <div class="wall back" onclick="rotateRoom(0, 0)">Back</div>-->
+
+            <div class="wall left x-axis" onclick="rotateRoom(0, 90)">Left</div>
+            <div class="wall right x-axis" onclick="rotateRoom(0, -90)">Right</div>
+            <div class="wall top y-axis" onclick="rotateRoom(-90, 0)">Top</div>
+            <div class="wall bottom y-axis" onclick="rotateRoom(90, 0)">Bottom</div>
+        </div>
+    </div>
+    <script>
+        let xRotation = 0;
+        let yRotation = 0;
+
+        function rotateRoom(x, y) {
+            xRotation = x;
+            yRotation = y;
+            document.getElementById('room').style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        }
+    </script>
+</body>
+</html>

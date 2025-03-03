@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antiweb</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <p class="drifting-text">this site has to be deciphered</p>
+        <p class="drifting-text">movement is key</p>
+        <p class="drifting-text">i dont know what to write here</p>
+        <p class="drifting-text">mom, look im moving</p>
+        <p class="drifting-text">out of ideas</p>
+        
+        <div class="grid">
+            <div class="grid-item text">text block</div>
+            <div class="grid-item image">Platzhalter</div>
+            <div class="grid-item text">text block</div>
+            <div class="grid-item image">Platzhalter</div>
+            <div class="grid-item text">text block</div>
+            <div class="grid-item image">Platzhalter</div>
+        </div>
+        
+        <button id="resetButton">RESET</button>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        body {
+            background: white;
+            color: black;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .moving-text {
+            font-size: 6rem;
+            font-weight: bold;
+            position: absolute;
+            animation: moveText 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(-50px); }
+            100% { transform: translateX(50px); }
+        }
+
+        .drifting-text {
+            font-size: 3rem;
+            font-weight: bold;
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .grid-item {
+            font-size: 5rem;
+            font-weight: bold;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        .image {
+            background: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #resetButton {
+            padding: 20px 40px;
+            font-size: 2rem;
+            cursor: pointer;
+            border: none;
+            background: black;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #resetButton:hover {
+            background: red;
+        }
+
+        .cursor-trail {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: black;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.6;
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll(".drifting-text").forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+                el.style.position = "absolute";
+                el.style.left = Math.random() * window.innerWidth + "px";
+                el.style.top = Math.random() * window.innerHeight + "px";
+            });
+        });
+
+        window.addEventListener("wheel", (event) => {
+            event.preventDefault();
+            window.scrollBy(0, -event.deltaY * 1.5);
+        }, { passive: false });
+
+        document.addEventListener("mousemove", (event) => {
+            const trail = document.createElement("div");
+            trail.classList.add("cursor-trail");
+            document.body.appendChild(trail);
+            
+            trail.style.left = `${event.clientX}px`;
+            trail.style.top = `${event.clientY}px`;
+            trail.style.transform = `scale(${Math.random() * 1.5 + 0.5})`;
+            
+            setTimeout(() => {
+                trail.style.opacity = "0";
+                setTimeout(() => trail.remove(), 500);
+            }, 200);
+        });
+
+        document.getElementById("resetButton").addEventListener("click", () => {
+            location.reload();
+        });
+    </script>
+</body>
+</html>
