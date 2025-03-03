@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .container{
+            display:flex;
+            justify-content: space-around;
+        }
+        .child{
+            flex: 1;
+            background-color: lightblue;
+            border: 1px solid black;
+            margin: 1rem;
+            font-family: "Red Hat Display", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 2rem;
+        }
+        .fix{
+            flex-basis: 200px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex: 0 0 200px;
+        }
+        .grow{
+            flex: 1 0 200px;
+        }
+        .shrink{
+            flex: 0 1 200px;
+        }
+        .growshrink{
+        flex-basis: 200px;/* Basisbreite */
+        flex-grow: 1; /*Element soll wachsen*/
+        flex-shrink: 1;/*Element soll schrumpfen*/
+        flex: 1 1 200px;/*Kurzschreibweise, identisch mit oben*/
+        }
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child fix">Fix</div>
+        <div class="child grow">Grow</div>
+        <div class="child shrink">Shrink</div>
+        <div class="child fix">Fix</div>
+        <div class="child growshrink">Grow and Shrink</div>
+    </div>
+
+    <div class="container">
+        <div class="child fix">Fix</div>
+        <div class="child grow">
+            <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 89.86 88.73" preserveAspectRatio="none">
+                
+                <path class="cls-1" d="M89.72,0v9.42H9.42l.07,29.74,67.01-.21v9.42l-66.94.21.07,30.73h80.23v9.42H.21L0,0h89.72Z"/>
+              </svg>
+
+        </div>
+        
+    </div>
+</body>
+</html>

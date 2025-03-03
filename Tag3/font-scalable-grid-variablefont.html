@@ -24,7 +24,6 @@
             /* wdth 100-250 */
             font-size: var(--fontSize);
             height: var(--fontSize);
-            display: inline-block;
             border:1px solid black;
         }
 
@@ -81,7 +80,6 @@
             text.style.setProperty('--fontStretch', newStretchValue);
 
             /* font-size abhängig von Zellhoehe */
-            const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
             let newFontValue=Math.floor((parentContainerHeight-40)/16);
 
             text.style.setProperty('--fontSize', newFontValue + 'rem');
