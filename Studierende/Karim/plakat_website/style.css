@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    grid-template-columns: 20% auto auto 10% 10% 10% 30%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    column-gap:0px;
+    row-gap: 0px;
+    background-color: wheat;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+  }
+  .container > div {
+    border: 1px solid black;
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .feld{
+    background-color: blue;
+  }
