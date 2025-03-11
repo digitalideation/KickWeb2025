@@ -1,0 +1,29 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.column {
+    background-color: lightgrey;
+    padding: 1rem;  
+    flex: 1;
+}
+
+.col-two-thirds {
+    flex:2;
+}
+
+@media only screen and (max-width: 768px) {
+    .row {
+        flex-wrap: wrap;
+
+    }
+    .column {
+        flex-basis: 100%;
+    }
+}

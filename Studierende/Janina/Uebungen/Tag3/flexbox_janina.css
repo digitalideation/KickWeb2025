@@ -1,0 +1,30 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 2px;
+}
+
+.column {
+    background-color: darkgray;
+    padding: 1rem;  
+    flex: 1;
+    aspect-ratio: 1;
+}
+
+.col-two-thirds {
+    flex:2;
+}
+
+@media only screen and (max-width: 768px) {
+    .row {
+        flex-wrap: wrap;
+
+    }
+    .column {
+        flex-basis: 100%;
+    }
+}

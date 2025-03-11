@@ -1,0 +1,136 @@
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+
+   
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    height: 100vh;
+    width: 100vw;
+    grid-auto-rows: 1fr;
+}
+
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hellgrau, .dunkelgrau {
+    width: 100%;
+    height: 100%;
+}
+
+.hellgrau {
+    background-color: lightgray;
+    
+}
+
+.dunkelgrau {
+    background-color: rgb(82, 82, 82);
+    
+}
+
+
+
+.text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform: scale(calc(100vw / 800), calc(100vh / 500));
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    
+
+}
+.portfolio-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: clamp(80px, 15vw, 250px);
+    font-weight: 700;
+    color: white; 
+    padding: 0px 0px;
+    border-radius: 8px; 
+}
+
+.janina {
+    position: absolute;
+    color: white; 
+    font-size: clamp(30px, 5vw, 80px);
+    transform: rotate(90deg);
+    top: 29%;
+    left: 31%;
+}
+
+.jakob {
+    position: absolute;
+    color: white; 
+    font-size: clamp(60px, 12vw, 200px);
+    top: 42%;
+    left: 40%;
+}
+
+.year {
+    position: absolute;
+    color: white; 
+    font-size: clamp(30px, 5vw, 80px);
+    transform: rotate(90deg);
+    top: 65%;
+    right: 18%;
+}
+
+.jj {
+    position: absolute;
+    color: white; 
+    font-size: clamp(50px, 10vw, 180px);
+    bottom: 5px;
+    right: 5px;
+}
+
+.hslu {
+    position: absolute;
+    color: white; 
+    font-size: clamp(50px, 10vw, 180px);
+    top: 160px;
+    left: 20px;
+}
+
+
+
+.digital-ideation {
+    position: absolute;
+    color: white; 
+    font-size: clamp(30px, 5vw, 80px);
+    transform: rotate(90deg);
+    top: 45%;
+    left: 1%;
+}
+
+.kiweb {
+    position: absolute;
+    color: white; 
+    font-size: clamp(70px, 13vw, 220px);
+    bottom: 5px;
+    left: 5px;
+}
+

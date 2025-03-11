@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="document-flow.css">
+    <style>
+body{
+    /*writing-mode: vertical-lr; Testweise Kommentare entfernen*/
+}
+p{
+    border:1px solid salmon;
+    width: 40%;
+    padding: 1rem;
+    background-color: aquamarine;
+    margin: 3rem;
+}
+
+span {
+background-color: rgb(234, 255, 0);
+
+}
+
+.container-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    height: 100vh;
+} 
+
+.item {
+    background-color: bisque;
+    padding: 2rem;
+
+}
+
+    </style>
+</head>
+<body>
+    <p>
+        Die <span>Hochschule Luzern</span> ist die Fachhochschule der sechs <img src="Bild.jpeg" alt="">Zentralschweizer Kantone. Mit aktuell rund 8'100 Studierenden in der Ausbildung, über 12'000 Weiterbildungsteilnehmenden – davon gut 5'000 an CAS-, DAS- und MAS-Programmen – sowie 250 neuen Projekten in Forschung und Entwicklung ist sie die grösste Bildungsinstitution im Herzen der Schweiz.
+    </p>
+    <p>
+
+        <div class="container-middle"></div>
+        <div class="item"> Mitte</div>
+
+
+        </div>
+        
+    </p>
+    
+</body>
+</html>
