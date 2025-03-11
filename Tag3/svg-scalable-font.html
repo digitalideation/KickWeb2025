@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Scalable in Grid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 200px;
+            grid-template-rows: 1fr 1fr 200px;
+           
+        }
+
+        svg {
+            width: 100%;
+            height: 80px;
+        }
+
+        div.scalesvg{
+            grid-column:2/3 ;
+            grid-row: 2/3;
+            
+        }
+        div.fix{
+            grid-column:3/4;
+            grid-row: 3/4;
+            background-color: lightblue;
+        }
+        div.fraction{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-color: lightpink;
+        }
+        text {
+            font-family: "Red Hat Display", sans-serif;
+            font-size: 6rem;
+            fill: black;
+        }
+    </style>
+
+</head>
+<!-- SVG Scalable in Grid, svg Element ohne Attribute width, height einbinden und per css width und height setzen -->
+<body>
+    <div class="grid-container">
+        <div class="scalesvg">
+            <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 89.86 88.73" preserveAspectRatio="none">
+                <text x='0' y='80'>H</text>
+            </svg>
+        </div>
+        <div class="fraction">
+            Fraction/Fraction
+        </div>
+        <div class="fix">
+            200/200px
+        </div>
+    </div>
+</body>
+
+</html>
