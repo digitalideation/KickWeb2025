@@ -1,0 +1,268 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("fonts/manrope.ttf");
+}
+
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 1fr 1fr 1fr 1fr 15%;
+  grid-template-rows: 25% 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  column-gap: 0px;
+  row-gap: 0px;
+  background-color: white;
+  padding: 0px;
+  height: 100vh;
+  width: 70vw; 
+}
+
+.number-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  width: 30vw; 
+}
+
+.number {
+  font-family: Manrope;
+  font-weight: 700;
+  color: blue;
+}
+
+.main-font {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: blue;
+}
+
+/* TEXT */
+.having-thought {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  font-size: 5vw;
+  max-height: 100%;
+  max-width: 100%;
+  text-align: left;
+  place-self: end;
+  padding: 3%;
+}
+
+.decide {
+  grid-column: 4/6;
+  grid-row: 2/3;
+  font-size: 5vw;
+  max-height: 100%;
+  max-width: 100%;
+  text-align: left;
+  align-self: end;
+  padding-left: 3%;
+}
+
+.having-decided {
+  grid-area: 4/4/5/5;
+  font-size: 2vw;
+  max-height: 100%;
+  max-width: 100%;
+  place-self: center;
+  padding: 3%;
+}
+
+.do-not-think {
+  grid-area: 5/4/6/6;
+  font-size: 2vw;
+  max-height: 100%;
+  max-width: 100%;
+  text-align: left;
+  translate: 20%;
+  padding: 3%;
+}
+
+.not {
+  grid-area: 6/5/7/6;
+  font-size: 1vw;
+  max-height: 100%;
+  max-width: 100%;
+  text-align: left;
+  padding: 4%;
+}
+
+.not-think {
+  grid-area: 7/6/7/7;
+  font-size: 1vw;
+  max-height: 100%;
+  max-width: 100%;
+  text-align: left;
+  padding: 3%;
+}
+
+.xl-circle {
+  grid-column: 6/6;
+  grid-row: 1/2;
+  border-radius: 50%;
+  height: 5vw;
+  width: 5vw;
+  max-height: 100%;
+  max-width: 100%;
+  background-color: blue;
+  place-self: center;
+}
+
+.l-circle {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  border-radius: 50%;
+  height: 3vw;
+  width: 3vw;
+  max-height: 100%;
+  max-width: 100%;
+  background-color: blue;
+  place-self: center;
+}
+
+.m-circle {
+  grid-column: 4/5;
+  grid-row: 3/4;
+  border-radius: 50%;
+  height: 2vw;
+  width: 2vw;
+  max-height: 100%;
+  max-width: 100%;
+  background-color: blue;
+  place-self: center;
+}
+
+.s-circle {
+  grid-column: 6/7;
+  grid-row: 6/7;
+  border-radius: 50%;
+  height: 1vw;
+  width: 1vw;
+  max-height: 100%;
+  max-width: 100%;
+  background-color: blue;
+  place-self: center;
+  transform: translateX(-400%)
+}
+
+
+.num1{
+  grid-column: 2/3; 
+  height:40vh;
+  font-size: 30vw; 
+  text-align: center; 
+  display: grid; 
+  justify-content: center; 
+  align-items: baseline; 
+  border: solid 2px black; 
+  background-color: aquamarine;
+}
+
+/* RASTER*/
+.ho1 {
+  grid-column: 2/7;
+  grid-row: 1/1;
+  box-shadow: inset 0 -3px 0 0 blue;
+}
+
+.ho2 {
+  grid-column: 1/7;
+  grid-row: 2/3;
+  box-shadow: inset 0 -3px 0 0 blue;
+}
+
+.ho3 {
+  grid-column: 2/7;
+  grid-row: 3/4;
+  box-shadow: inset 0 -3px 0 0 blue;
+}
+
+.ver1 {
+  grid-column: 2/3;
+  grid-row: 2/8;
+  border-left: solid 3px blue;
+  border-right: solid 3px blue;
+}
+
+.ver2 {
+  grid-column: 4/5;
+  grid-row: 1/8;
+  border-left: solid 3px blue;
+}
+
+.ver3 {
+  grid-column: 6/7;
+  grid-row: 1/8;
+  border-left: solid 3px blue;
+}
+
+.ver4-1 {
+  grid-column: 5/6;
+  grid-row: 1/2;
+  border-left: solid 3px blue;
+}
+
+.ver4-2 {
+  grid-column: 5/6;
+  grid-row: 3/8;
+  border-left: solid 3px blue;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+  .main-container {
+    display: flex;
+    flex-direction: column; 
+    height: 100vh;
+
+  }
+
+  .grid-container{
+    grid-template-columns: 15% 1fr 1fr 1fr 1fr 15%;
+    grid-template-rows: 20% 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+
+    width: 100vw; 
+    height: 60vh;
+  }
+
+  .number-container {
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:1fr;
+    width: 100vw;
+    height: 40vh;
+  }
+
+  .having-thought {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    font-size: 3vw;
+    max-height: 100%;
+    max-width: 100%;
+    text-align: left;
+    place-self: end;
+    padding: 3%;
+  }
+
+
+
+  .num1 {
+    grid-column: 2/3; 
+    height:40vh;
+    font-size: 30vw; 
+    text-align: center; 
+    display: grid; 
+    justify-content: center; 
+    align-items: baseline; 
+    border: solid 2px black; 
+    background-color: aquamarine;
+  }
+
+}
