@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'DIN', sans-serif;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+@font-face {
+    font-family:'DIN', sans-serif;
+    src: url(Fonts/DIN-Regular.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    position: relative;
+}
+
+.grid {
+    display: contents; /* Makes grid cells part of the main grid */
+}
+
+.grid div {
+    border: 0.1vw solid black;
+}
+
+/* Words & Sections inside Grid */
+.word, .colored-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1vw, 1.5vw, 2.5vw);
+    font-weight: bold;
+    color: white;
+    text-shadow: -0.1vw -0.1vw 0 black, 0.1vw -0.1vw 0 black, -0.1vw 0.1vw 0 black, 0.1vw 0.1vw 0 black;
+}
+
+
+#lukas {grid-column: 1; }
+#andrea {grid-column: 2/4;}
+#grande {grid-column: 4/5;}
+#digital {grid-column: 9/11;}
+#ideation {grid-column: 11/12;}
+#kiweb {grid-column: 12/14;}
+#hslu {grid-column: 19;}
+#year {grid-column: 20;}
+
+.red-bar { background-color: red; grid-column: 3/12; grid-row:2/8;border: 0.1vw solid black; }
+.red-bar-2{ background-color: red; grid-column: 19/21; grid-row:12/16;border: 0.1vw solid black; }
+.blue-bar { background-color: blue; grid-column: 12 / 19; grid-row: 10 / 15; border: 0.1vw solid black;}
+.yellow-bar { background-color: yellow; grid-column: 12/19; grid-row: 1/6; border: 0.1vw solid black; }
+.yellow-bar-2 { background-color: yellow; grid-column: 1/3; grid-row: 9/14; border: 0.1vw solid black; }
+.black-block { background-color: black; grid-column: 3/7 ; grid-row: 8/11; z-index: 1;}
+.black-block-2 { background-color: black; grid-column: 7/12 ; grid-row:11/15;}
+
+
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+    #lukas {grid-column: 1; }
+    #andrea {grid-column: 2/4;}
+    #grande {grid-column: 4/5;}
+    #digital {grid-column: 9/10;}
+    #ideation {grid-column: 11/12;}
+    #kiweb {grid-column: 13/14;}
+    #hslu {grid-column: 17;}
+    #year {grid-column: 18;}
+    
+    .red-bar { background-color: red; grid-column: 8/3 ; grid-row: 6/8;border: 0.1vw solid black; }
+.red-bar-2{ background-color: red; grid-column: 8; grid-row: 10/13;border: 0.1vw solid black; }
+.blue-bar { background-color: blue; grid-column: 9/15; grid-row: 10/13; border: 0.1vw solid black;}
+.yellow-bar { background-color: yellow; grid-column: 2/6; grid-row: 3/6; border: 0.1vw solid black; }
+.yellow-bar-2 { background-color: yellow; grid-column: 13/15; grid-row: 6/10; border: 0.1vw solid black; }
+.black-block { background-color: black; grid-column: 4/10; grid-row:8/10; z-index: 1;}
+.black-block-2 { background-color: black; grid-column: 13/15 ; grid-row:4/6;}
+    
+    
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(13, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+    #lukas {grid-column: 1; }
+    #andrea {grid-column: 2;}
+    #grande {grid-column: 3;}
+    #digital {grid-column: 7;}
+    #ideation {grid-column: 8;}
+    #kiweb {grid-column: 11;}
+    #hslu {grid-column: 12;}
+    #year {grid-column: 13;}
+
+    .red-bar { background-color: red; grid-column: 5/9; grid-row: 1;border: 0.1vw solid black; }
+    .red-bar-2{ background-color: red; grid-column: 4/6; grid-row: 6/8;border: 0.1vw solid black; }
+    .blue-bar { background-color: blue; grid-column: 10/6 ; grid-row: 6/8; border: 0.1vw solid black;}
+    .yellow-bar { background-color: yellow; grid-column: 3/7; grid-row: 2/6; border: 0.1vw solid black; }
+    .yellow-bar-2 { background-color: yellow; grid-column: 15/17; grid-row: 6/10; border: 0.1vw solid black; }
+    .black-block { background-color: black; grid-column: 3/8; grid-row:8; z-index: 1;}
+    .black-block-2 { background-color: black; grid-column: 7/9 ; grid-row:2/4;}
+
+}
+
