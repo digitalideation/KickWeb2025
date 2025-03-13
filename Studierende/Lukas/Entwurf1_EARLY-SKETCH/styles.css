@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'DIN', sans-serif;
+    background-color: rgb(255, 225, 0);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    width: 3024px;
+    height: 1964px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.grid div {
+    border: 1px solid red;
+    flex-grow: 1;
+}
+
+.word {
+    position: absolute;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,  
+        -1px  1px 0 black, 
+         1px  1px 0 black;
+}
+
+
+
+
+#lukas { font-size: 48px; top: 500px; left:100px; }
+#grande { font-size: 64px; top: 600px; left:100px; }
+#digital { font-size: 213px; top: 760px; left:-239px; transform: rotate(-90deg); }
+#ideation { font-size: 213px; top: 868px; left:260px; }
+#kiweb { font-size: 213px; top: 560px; left:780px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'DIN', sans-serif;
+    background-color: rgb(255, 225, 0);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    width: 100vw; /* Responsive grid width */
+    height: 100vh; /* Responsive grid height */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.grid div {
+    border: 0.1vw solid red; /* Responsive grid line thickness */
+    flex-grow: 1;
+}
+
+.word {
+    position: absolute;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    text-shadow: 
+        -0.1vw -0.1vw 0 black,  
+         0.1vw -0.1vw 0 black,  
+        -0.1vw  0.1vw 0 black, 
+         0.1vw  0.1vw 0 black;
+}
+
+/* Responsive positioning */
+#lukas { font-size: clamp(2vw, 3vw, 5vw); top: 15%; left: 5%; }
+#grande { font-size: clamp(2.5vw, 4vw, 6vw); top: 18%; left: 5%; }
+#digital { font-size: clamp(6vw, 10vw, 12vw); top: 38%; left: -8%; transform: rotate(-90deg); }
+#ideation { font-size: clamp(6vw, 10vw, 12vw); top: 44%; left: 12%; }
+#kiweb { font-size: clamp(6vw, 10vw, 12vw); top: 28%; left: 32%; }
