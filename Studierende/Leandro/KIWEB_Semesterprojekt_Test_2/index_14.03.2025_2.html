@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Rotatable Cube</title>
+    <title>3D Seite</title>
     <style>
       body {
         margin: 0;
@@ -39,7 +39,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(255, 255, 255, 1); /* Fully opaque */
+        background: rgba(255, 255, 255, 1);
         border: 2px solid #000;
         display: flex;
         justify-content: center;
@@ -49,7 +49,6 @@
         cursor: pointer;
       }
 
-      /* Wall Positions */
       .front  { transform: translateZ(40vh); }
       .back   { transform: translateZ(-40vh) rotateY(180deg); }
       .left   { transform: translateX(-40vh) rotateY(-90deg); }
@@ -87,7 +86,7 @@
             if (!isDragging) return;
             let deltaX = event.clientX - lastX;
             let deltaY = event.clientY - lastY;
-            yRotation += deltaX * 0.5; // Adjust sensitivity
+            yRotation += deltaX * 0.5;
             xRotation -= deltaY * 0.5;
             lastX = event.clientX;
             lastY = event.clientY;
@@ -102,7 +101,6 @@
             isDragging = false;
         });
 
-        // Add click event listeners to each wall to reset to neutral state
         const walls = document.querySelectorAll('.wall');
         walls.forEach(wall => {
             wall.addEventListener('click', () => {
@@ -130,12 +128,10 @@
                     yRotation = -90;
                     break;
                 case 'top':
-                    // Fix: Adjust the top to avoid inversion
                     xRotation = -90;
                     yRotation = 0;
                     break;
                 case 'bottom':
-                    // Fix: Adjust the bottom to avoid inversion
                     xRotation = 90;
                     yRotation = 0;
                     break;
