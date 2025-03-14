@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Rotatable Cube</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+        user-select: none;
+      }
+
+      .scene {
+        perspective: 120vw;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .room {
+        width: 80vh;
+        height: 80vh;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(-20deg) rotateY(30deg);
+        transition: transform 0.1s linear;
+      }
+
+      .wall {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 1); /* Fully opaque */
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+      }
+
+      /* Wall Positions */
+      .front  { transform: translateZ(40vh); }
+      .back   { transform: translateZ(-40vh) rotateY(180deg); }
+      .left   { transform: translateX(-40vh) rotateY(-90deg); }
+      .right  { transform: translateX(40vh) rotateY(90deg); }
+      .top    { transform: translateY(-40vh) rotateX(90deg); }
+      .bottom { transform: translateY(40vh) rotateX(-90deg); }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="room" id="room">
+            <div class="wall front" data-side="front">Front</div>
+            <div class="wall back" data-side="back">Back</div>
+            <div class="wall left" data-side="left">Left</div>
+            <div class="wall right" data-side="right">Right</div>
+            <div class="wall top" data-side="top">Top</div>
+            <div class="wall bottom" data-side="bottom">Bottom</div>
+        </div>
+    </div>
+
+    <script>
+        let xRotation = -20;
+        let yRotation = 30;
+        let isDragging = false;
+        let lastX, lastY;
+        const room = document.getElementById('room');
+
+        document.addEventListener('mousedown', (event) => {
+            isDragging = true;
+            lastX = event.clientX;
+            lastY = event.clientY;
+        });
+
+        document.addEventListener('mousemove', (event) => {
+            if (!isDragging) return;
+            let deltaX = event.clientX - lastX;
+            let deltaY = event.clientY - lastY;
+            yRotation += deltaX * 0.5; // Adjust sensitivity
+            xRotation -= deltaY * 0.5;
+            lastX = event.clientX;
+            lastY = event.clientY;
+            room.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+
+        // Add click event listeners to each wall to reset to neutral state
+        const walls = document.querySelectorAll('.wall');
+        walls.forEach(wall => {
+            wall.addEventListener('click', () => {
+                const side = wall.getAttribute('data-side');
+                resetToNeutral(side);
+            });
+        });
+
+        function resetToNeutral(side) {
+            switch(side) {
+                case 'front':
+                    xRotation = 0;
+                    yRotation = 0;
+                    break;
+                case 'back':
+                    xRotation = 0;
+                    yRotation = 180;
+                    break;
+                case 'left':
+                    xRotation = 0;
+                    yRotation = 90;
+                    break;
+                case 'right':
+                    xRotation = 0;
+                    yRotation = -90;
+                    break;
+                case 'top':
+                    // Fix: Adjust the top to avoid inversion
+                    xRotation = -90;
+                    yRotation = 0;
+                    break;
+                case 'bottom':
+                    // Fix: Adjust the bottom to avoid inversion
+                    xRotation = 90;
+                    yRotation = 0;
+                    break;
+            }
+            room.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        }
+    </script>
+</body>
+</html>
