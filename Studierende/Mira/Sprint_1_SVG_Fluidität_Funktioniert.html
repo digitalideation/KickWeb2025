@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Skizze mit SVG</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            text-align: left;
+        }
+        .word {
+            display: flex;
+            align-items: center;
+            font-family: sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            font-size: 10vw;  /* Einheitliche Größe */
+            color: black;
+            min-width: fit-content;
+        }
+
+        .word svg {
+            width: 10;  /* Einheitliche Breite */
+            height: 7.2vw; /* Einheitliche Höhe */
+            display: inline-block;
+            transform-origin: left;
+        }
+            
+        .word span {
+            display: inline-block;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .word:hover span {
+            opacity: 1;
+        }
+
+        .word:nth-child(2) {
+            transform: translateY(10vh); /* PLEX leicht nach unten verschieben */
+        }
+        .word:nth-child(3) {
+            transform: translateY(5vh) translateX(-7vw); /* ITY leicht nach unten verschieben */
+        }
+        .word:nth-child(5) {
+            transform: translateY(10vh) translateX(10vw); /* MAT leicht nach unten und links verschieben */
+        }
+        .word:nth-child(6) {
+            transform: translateY(5vh) translateX(-5vw); /* TER leicht nach unten verschieben */
+        }
+
+        /* Positionierung */
+        .word:nth-child(1) { grid-column: 1 / 3; grid-row: 1 / 2; } /* COM */
+        .word:nth-child(2) { grid-column: 4 / 6; grid-row: 1 / 2; } /* PLEX */
+        .word:nth-child(3) { grid-column: 3 / 6; grid-row: 2 / 3; } /* ITY */
+        .word:nth-child(4) { grid-column: 1 / 3; grid-row: 3 / 4; } /* IN */
+        .word:nth-child(5) { grid-column: 4 / 6; grid-row: 3 / 4; } /* MAT */
+        .word:nth-child(6) { grid-column: 3 / 6; grid-row: 4 / 5; } /* TER */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="word">
+            <span>CO</span>
+            <div class="letter M">
+                <svg id="svgM" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.1 216">
+                    <path id="mPath" fill="black" d="M0,216V0h31.2l223.8,190.5h.6L478.2,0h30.9v216h-20.4V23.4h-.6l-223.8,192.6h-19.2L21,23.4h-.6v192.6H0Z"/>
+                </svg>
+            </div>
+        
+            <script>
+                const originalPathM = "M0,216V0h31.2l223.8,190.5h.6L478.2,0h30.9v216h-20.4V23.4h-.6l-223.8,192.6h-19.2L21,23.4h-.6v192.6H0Z";
+                const narrowPathM = "M0,216V0h31.2l70.8,190.5h.6L172.2,0h30.9v216h-20.4V23.4h-.6l-70.8,192.6h-19.2L21,23.4h-.6v192.6H0Z";
+        
+                const pathM = document.getElementById("mPath");
+        
+                document.getElementById("svgM").addEventListener("mouseover", () => {
+                    gsap.to(pathM, { duration: 1, attr: { d: narrowPathM }, ease: "power2.out" });
+                });
+
+                document.getElementById("svgM").addEventListener("mouseout", () => {
+                    gsap.to(pathM, { duration: 1, attr: { d: originalPathM }, ease: "power2.out" });
+                });
+            </script>
+        </div>
+        <div class="word">
+            <span>PLE</span>
+            <div class="letter X">
+                <svg id="svgX" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435.45 216">
+                    <path id="xPath" fill="black" d="M206.05,120.6L33,216H0l194.65-111L3.25,0h30.75l172.05,90.9L400,0h32.15l-213.8,105,217.1,111h-31.45l-197.95-95.4Z"/>
+                </svg>
+            </div>
+        
+            <script>
+                const originalPathX = "M206.05,120.6L33,216H0l194.65-111L3.25,0h30.75l172.05,90.9L400,0h32.15l-213.8,105,217.1,111h-31.45l-197.95-95.4Z";
+                const narrowPathX = "M85.8,120.6l-62.7,95.4H0l74.4-111L3,0h23.7l59.1,90.9L145.2,0h23.7l-70.8,105,74.1,111h-23.4l-63-95.4Z";
+        
+                const pathX = document.getElementById("xPath");
+        
+                document.getElementById("svgX").addEventListener("mouseover", () => {
+                    gsap.to(pathX, { duration: 1, attr: { d: narrowPathX }, ease: "power2.out" });
+                });
+        
+                document.getElementById("svgX").addEventListener("mouseout", () => {
+                    gsap.to(pathX, { duration: 1, attr: { d: originalPathX }, ease: "power2.out" });
+                });
+            </script>
+        </div>
+        <div class="word">
+            <span>IT</span>
+            <div class="letter Y">
+                <svg id="svgY" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 874.8 216.23">
+                    <path id="yPath" fill="black" d="M402,104.33L820.32,0h54.48l-462.3,122.03v94.2h-20.4v-92.7L0,0h49.32l352.68,104.33Z"/>
+                </svg>
+            </div>
+        
+            <script>
+                const originalPathY = "M402,104.33L820.32,0h54.48l-462.3,122.03v94.2h-20.4v-92.7L0,0h49.32l352.68,104.33Z";
+                const narrowPathY = "M87,104.1L152.1,0h23.7l-78.3,121.8v94.2h-20.4v-92.7L0,0h23.4l63.6,104.1Z";
+        
+                const pathY = document.getElementById("yPath");
+        
+                document.getElementById("svgY").addEventListener("mouseover", () => {
+                    gsap.to(pathY, { duration: 1, attr: { d: narrowPathY }, ease: "power2.out" });
+                });
+        
+                document.getElementById("svgY").addEventListener("mouseout", () => {
+                    gsap.to(pathY, { duration: 1, attr: { d: originalPathY }, ease: "power2.out" });
+                });
+            </script>
+        </div>
+        <div class="word">
+            <span>I</span>
+            <body>
+
+                <div class="letter N">
+                    <svg id="svgN" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494.9 216">
+                        <path id="nPath" fill="black" d="M21,27.6h-.6v188.4H0V0h23.1l450.8,188.7h.6V0h20.4v216h-23.7L21,27.6Z"/>
+                    </svg>
+                </div>
+            
+                <script>
+                    const originalPathN = "M21,27.6h-.6v188.4H0V0h23.1l450.8,188.7h.6V0h20.4v216h-23.7L21,27.6Z";
+                    const narrowPathN = "M21,27.6h-.6v188.4H0V0h23.1l124.8,188.7h.6V0h20.4v216h-23.7L21,27.6Z";
+            
+                    const pathN = document.getElementById("nPath");
+            
+                    document.getElementById("svgN").addEventListener("mouseover", () => {
+                        gsap.to(pathN, { duration: 1, attr: { d: narrowPathN }, ease: "power2.out" });
+                    });
+            
+                    document.getElementById("svgN").addEventListener("mouseout", () => {
+                        gsap.to(pathN, { duration: 1, attr: { d: originalPathN }, ease: "power2.out" });
+                    });
+                </script>
+        </div>
+        <div class="word">
+            <span>MA</span>
+            <div class="letter T">
+                <svg id="svgT" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 722 216">
+                    <path id="tPath" fill="black" d="M0,0h722v17.4h-356.94v198.6h-20.4V17.4H0V0Z"/>
+                </svg>
+            </div>
+        
+            <script>
+                const originalPathT = "M0,0h722v17.4h-356.94v198.6h-20.4V17.4H0V0Z";
+                const narrowPathT = "M0,0h157.2v17.4h-68.4v198.6h-20.4V17.4H0V0Z";
+        
+                const pathT = document.getElementById("tPath");
+        
+                document.getElementById("svgT").addEventListener("mouseover", () => {
+                    gsap.to(pathT, { duration: 1, attr: { d: narrowPathT }, ease: "power2.out" });
+                });
+        
+                document.getElementById("svgT").addEventListener("mouseout", () => {
+                    gsap.to(pathT, { duration: 1, attr: { d: originalPathT }, ease: "power2.out" });
+                });
+            </script>
+        </div>
+        <div class="word">
+            <span>TE</span>
+            <div class="letter R">
+                <svg id="svgR" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540.6 216">
+                    <path id="rPath" fill="black" d="M20.4,117.9v98.1l-20.4-.3V0h465.6c23.8,0,42,4.45,54.6,13.35,12.6,8.9,18.9,23.35,18.9,43.35,0,13.6-2.75,24.4-8.25,32.4-5.5,8-14.45,14.8-26.85,20.4,6.4,2.2,11.4,5.4,15,9.6,3.6,4.2,6.3,9,8.1,14.4,1.8,5.4,2.95,11.1,3.45,17.1.5,6,.85,11.8,1.05,17.4.2,8.2.55,15,1.05,20.4.5,5.4,1.1,9.8,1.8,13.2.7,3.4,1.55,6.05,2.55,7.95,1,1.9,2.2,3.35,3.6,4.35v1.8l-22.5.3c-2.2-3.6-3.75-8.6-4.65-15-.9-6.4-1.6-13.1-2.1-20.1-.5-7-.9-13.8-1.2-20.4-.3-6.6-.85-12-1.65-16.2-1.2-5.8-3.15-10.45-5.85-13.95-2.7-3.5-5.95-6.15-9.75-7.95-3.8-1.8-8.05-3-12.75-3.6-4.7-.6-9.55-.9-14.55-.9H20.4ZM465,100.5c7.6,0,14.65-.8,21.15-2.4,6.5-1.6,12.15-4.15,16.95-7.65,4.8-3.5,8.6-7.95,11.4-13.35,2.8-5.4,4.2-11.9,4.2-19.5,0-8-1.45-14.6-4.35-19.8-2.9-5.2-6.8-9.3-11.7-12.3-4.9-3-10.5-5.1-16.8-6.3-6.3-1.2-12.85-1.8-19.65-1.8H20.4v83.1h444.6Z"/>
+                </svg>
+            </div>
+        
+            <script>
+                const originalPathR = "M20.4,117.9v98.1l-20.4-.3V0h465.6c23.8,0,42,4.45,54.6,13.35,12.6,8.9,18.9,23.35,18.9,43.35,0,13.6-2.75,24.4-8.25,32.4-5.5,8-14.45,14.8-26.85,20.4,6.4,2.2,11.4,5.4,15,9.6,3.6,4.2,6.3,9,8.1,14.4,1.8,5.4,2.95,11.1,3.45,17.1.5,6,.85,11.8,1.05,17.4.2,8.2.55,15,1.05,20.4.5,5.4,1.1,9.8,1.8,13.2.7,3.4,1.55,6.05,2.55,7.95,1,1.9,2.2,3.35,3.6,4.35v1.8l-22.5.3c-2.2-3.6-3.75-8.6-4.65-15-.9-6.4-1.6-13.1-2.1-20.1-.5-7-.9-13.8-1.2-20.4-.3-6.6-.85-12-1.65-16.2-1.2-5.8-3.15-10.45-5.85-13.95-2.7-3.5-5.95-6.15-9.75-7.95-3.8-1.8-8.05-3-12.75-3.6-4.7-.6-9.55-.9-14.55-.9H20.4ZM465,100.5c7.6,0,14.65-.8,21.15-2.4,6.5-1.6,12.15-4.15,16.95-7.65,4.8-3.5,8.6-7.95,11.4-13.35,2.8-5.4,4.2-11.9,4.2-19.5,0-8-1.45-14.6-4.35-19.8-2.9-5.2-6.8-9.3-11.7-12.3-4.9-3-10.5-5.1-16.8-6.3-6.3-1.2-12.85-1.8-19.65-1.8H20.4v83.1h444.6Z";
+                const narrowPathR = "M20.4,117.9v98.1l-20.4-.3V0h84.6c23.8,0,42,4.45,54.6,13.35,12.6,8.9,18.9,23.35,18.9,43.35,0,13.6-2.75,24.4-8.25,32.4-5.5,8-14.45,14.8-26.85,20.4,6.4,2.2,11.4,5.4,15,9.6,3.6,4.2,6.3,9,8.1,14.4,1.8,5.4,2.95,11.1,3.45,17.1.5,6,.85,11.8,1.05,17.4.2,8.2.55,15,1.05,20.4.5,5.4,1.1,9.8,1.8,13.2.7,3.4,1.55,6.05,2.55,7.95,1,1.9,2.2,3.35,3.6,4.35v1.8l-22.5.3c-2.2-3.6-3.75-8.6-4.65-15-.9-6.4-1.6-13.1-2.1-20.1-.5-7-.9-13.8-1.2-20.4-.3-6.6-.85-12-1.65-16.2-1.2-5.8-3.15-10.45-5.85-13.95-2.7-3.5-5.95-6.15-9.75-7.95-3.8-1.8-8.05-3-12.75-3.6-4.7-.6-9.55-.9-14.55-.9H20.4ZM84,100.5c7.6,0,14.65-.8,21.15-2.4,6.5-1.6,12.15-4.15,16.95-7.65,4.8-3.5,8.6-7.95,11.4-13.35,2.8-5.4,4.2-11.9,4.2-19.5,0-8-1.45-14.6-4.35-19.8-2.9-5.2-6.8-9.3-11.7-12.3-4.9-3-10.5-5.1-16.8-6.3-6.3-1.2-12.85-1.8-19.65-1.8H20.4v83.1h63.6Z";
+        
+                const pathR = document.getElementById("rPath");
+        
+                document.getElementById("svgR").addEventListener("mouseover", () => {
+                    gsap.to(pathR, { duration: 1, attr: { d: narrowPathR }, ease: "power2.out" });
+                });
+        
+                document.getElementById("svgR").addEventListener("mouseout", () => {
+                    gsap.to(pathR, { duration: 1, attr: { d: originalPathR }, ease: "power2.out" });
+                });
+            </script>
+        </div>
+    </div>
+    <script>
+        gsap.utils.toArray("svg").forEach(svg => {
+            svg.addEventListener("mouseenter", () => gsap.to(svg, { duration: 1, scaleX: 0.5, ease: "power2.out" }));
+            svg.addEventListener("mouseleave", () => gsap.to(svg, { duration: 1, scaleX: 1, ease: "power2.out" }));
+        });
+    </script>
+</body>
+</html>
