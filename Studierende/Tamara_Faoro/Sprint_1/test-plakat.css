@@ -1,0 +1,331 @@
+
+
+@font-face {
+    font-family:'Hani' ;
+    src: url(/Sprint_1/Hani/Hani.woff2) format("woff2");
+}
+
+/*
+@font-face {
+    font-family:'Hani' ;
+    src: url(/Users/tamarafaoro/Documents/KickWeb/Hani/Hani.woff2) format("woff2");
+}
+*/
+
+h1 {
+    font-family: 'Hani';
+   
+}
+
+body{
+    background-color: black;
+}
+
+
+* {
+    
+    color: white;
+    font-family: 'Hani';
+    font-size: 100px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr ;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 200vh;
+    }
+    
+    .divO { 
+        grid-area: 1 / 1 / 3 / 2; }
+    .divP { 
+        grid-area: 2 / 2 / 4 / 3; 
+    }
+    .divE { 
+        grid-area: 1 / 3 / 3 / 4; }
+     .divE-bottom-line { 
+         grid-area: 2 / 3 / 3 / 4; }
+    .divN { 
+        grid-area: 2 / 4 / 4/ 5; }
+    .divH { 
+        grid-area: 3 / 1 / 7/ 2; }
+    .divH2 { 
+            grid-area: 3 / 1 / 7/ 2; }
+    .divH-middle-line { 
+        grid-area: 6 / 1 / 7 / 2; }
+    .divO2 { 
+        grid-area: 6 / 2 / 8 / 3; }
+    .divU { 
+        grid-area: 5 / 3 / 7/ 4; }
+    .divS { 
+        grid-area: 7 / 3 / 9 / 4; }
+    .divE2 {
+         grid-area: 6 / 4 / 8 / 4; }
+     .divE2-bottom-line {
+            grid-area: 7 / 4 / 8 / 4; }
+    
+.rect-thick {
+    background-color: white;
+    height: 8vh;
+    width: 100%;
+    margin-top: 10vh;
+}
+.rect-slim {
+    background-color: white;
+    height: 3vh;
+    width: 100%;
+    
+}
+
+.rect-slim2{
+    background-color: white;
+    height: 3vh;
+    width: 100%;
+    margin-top: 15vh;
+    
+}
+
+.rect-thick2 {
+    background-color: white;
+    height: 8vh;
+    width: 100%;
+    margin-top: 18vh;
+}
+
+
+.circle {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    border: 8vh solid white;
+    height: 50vh;
+    width: 50vh;
+    transform: translate(-20vh);
+    margin-right: -10vw;
+    
+}
+
+
+.circle2 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 40vh;
+    width: 40vh;
+    margin-left: 5vh;
+    margin-top: 15vh;
+
+
+   
+}
+
+.rect-h {
+    background-color: white;
+    width: 5vw;
+    height: 88%;
+    margin-top: 10vh;
+}
+
+.rect-h2 {
+    background-color: white;
+    width: 5vw;
+    height: 88%;
+    margin-top: 10vh;
+    float: right;
+}
+
+h1 {
+        font-size: 65vh;
+        line-height: 65vh;
+        margin: 0;
+        padding: 0;
+        transform: translate(0vh, -9vh);
+    
+}
+
+
+
+.rect-thick3 {
+    background-color: white;
+    height: 8vh;
+    width: 100%;
+}
+.rect-slim3 {
+    background-color: white;
+    height: 3vh;
+    width: 100%;
+    margin-top: 25vh;
+    
+}
+
+.rect-thick4 {
+    background-color: white;
+    height: 8vh;
+    width: 100%;
+    margin-top: 10vh;
+}
+
+.letterU {
+    margin-top: 2vh;
+}
+
+.letterS {
+    margin-top: 2vh;
+}
+
+
+.div-innerO { 
+    grid-area: 1 / 1 / 3 / 2; }
+.div-innerCircle1 { 
+    grid-area: 2 / 2 / 3 / 3; 
+}
+.div-innerRect1 { 
+    grid-area: 1 / 3 / 3 / 4; }
+
+.div-innerH { 
+    grid-area: 3 / 1 / 7/ 2; }
+
+.div-innerCircle2 { 
+    grid-area: 7 / 3 / 9 / 4; }
+.div-innerRect2 {
+     grid-area: 6 / 4 / 7 / 4; }
+
+
+.innerO {
+    background-color: rgba(255, 237, 0, 0);
+    border-radius: 50%;
+    height: 42vh;
+    width: 42vh;
+    transform: translate(-8svh);
+    margin-right: -10vw;
+    margin-top: 6vw;
+
+}    
+
+.div-innerO:hover  .innerO {
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    border-radius: 50%;
+    height: 42vh;
+    width: 42vh;
+    transform: translate(-8svh);
+    margin-right: -10vw;
+    margin-top: 6vw;
+}
+
+.innerCircle1 {
+    background-color: rgba(255, 237, 0, 0);
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+    margin-left: 21vh;
+    margin-top: 10vh;
+}
+
+ .div-innerCircle1:hover .innerCircle1{
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+    margin-left: 21vh;
+    margin-top: 10vh;
+    z-index: 10;
+}
+
+.innerRect1 {
+    background-color: rgba(255, 237, 0, 0);
+    height: 14vh;
+    width: 100%;
+    margin-top: 21vh;
+}
+
+
+.div-innerRect1:hover .innerRect1 {
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    height: 14vh;
+    width: 100%;
+    margin-top: 21vh;
+}
+
+.innerH {
+    background-color: rgba(255, 237, 0, 0);
+    width: 11.5vw;
+    height: 62%;
+    margin-top: 10vh;
+    margin-left: 6.5vw;
+
+}
+
+
+.div-innerH:hover .innerH {
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    width: 11.5vw;
+    height: 62%;
+    margin-top: 10vh;
+    margin-left: 6.5vw;
+
+}
+
+.innerCircle2 {
+    background-color: rgba(255, 237, 0, 0);
+    border-radius: 50%;
+    height: 8vh;
+    width: 8vh;
+    margin-left: 14vh;
+    margin-top: 11vh;
+}
+
+.div-innerCircle2:hover .innerCircle2{
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    border-radius: 50%;
+    height: 8vh;
+    width: 8vh;
+    margin-left: 14vh;
+    margin-top: 11vh;
+    z-index: 10;
+}
+
+
+.innerRect2 {
+    background-color: rgba(255, 237, 0, 0);
+    height: 19vh;
+    width: 100%;
+    margin-top: 11vh;
+}
+
+
+.div-innerRect2:hover .innerRect2{
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    height: 19vh;
+    width: 100%;
+    margin-top: 11vh;
+}
