@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+}
+.grid, .grid-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  height: 100vh;
+  width: 100vw;
+  grid-auto-rows: 1fr;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 200px;
+  grid-template-rows: 1fr 1fr 200px;
+}
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.hellgrau, .dunkelgrau {
+  width: 100%;
+  height: 100%;
+}
+.hellgrau {
+  background-color: lightgray;
+}
+.dunkelgrau {
+  background-color: rgb(82, 82, 82);
+}
+.text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transform: scale(calc(100vw / 800), calc(100vh / 500));
+}
+/*alle Texte müssen hier nochmals angegeben werden*/
+.portfolio-title {
+  position: absolute;
+  top: 0%;
+  left: 2%;
+  width: 80vw; /* Responsiv */
+  max-width: 600px; /* Optional Max */
+  height: auto;
+}
+.portfolio-title svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.janina {
+  position: absolute;
+  top: 29%;
+  left: 25%;
+  transform: rotate(90deg);
+  width: 30vw; /* Responsiv */
+  max-width: 600px; /* Optional Max */
+  height: auto;
+}
+.janina svg {
+  width: 110%;
+  height: auto;
+  display: block;
+}
+.jakob {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  width: 30vw; /* Responsiv */
+  max-width: 600px; /* Optional Max */
+  height: auto;
+}
+.jakob svg {
+  width: 70%;
+  height: auto;
+  display: block;
+}
+.hslu {
+  position: absolute;
+  top: 63%;
+  left: 80%;
+  width: 100vw; /* Responsiv */
+  max-width: 600px; /* Optional Max */
+  height: auto;
+}
+.hslu svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.kickweb {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  width: 50vw; /* Responsiv */
+  max-width: 600px; /* Optional Max */
+  height: auto;
+}
+.kickweb svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.year2025 {
+  position: absolute;
+  top: 23%;
+  left: 60%;
+  width: 30vw; /* Responsiv */
+  max-width: 600px; /* Optional Max */
+  height: auto;
+}
+.year2025 svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.digital-ideation {
+  position: absolute;
+  top: 83%;
+  left: 47%;
+  transform: rotate(90deg);
+  width: 30vw; /* Responsiv */
+  max-width: 600px; /* Optional Max */
+  height: auto;
+}
+.digital-ideation svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/*Media Anforderung für kleinen Bildschirm*/
+/*@media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            padding: 10px;
+        }
+        
+        }*/
