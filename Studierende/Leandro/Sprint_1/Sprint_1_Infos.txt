@@ -1,0 +1,9 @@
+Sprint_1_Infos
+--------------
+
+In diesem Dokument finden sich Randinformationen zu meiner Abgabe Sprint_1 des Moduls KIWEB.FS25, aufgrund der Rahmenbedingungen, welche mit der Dozentin abgemacht wurden.
+
+Anstelle einer fluiden Web-Übersetzung eines, schon stehenden, Plakates, setzt sich meine Webseite mit der gänglichen Scroll-Funktion auf konventionellen Webseiten auseinander. Hierbei liegt ein Fokus darauf, diese neu zu gestalten.
+Als Endresultat dieser Ausgangslage wurde eine dreidimensionale Ansicht eines Kubus realisiert, welche den Inhalt der Webseite trägt.
+Auch inhaltlich wurde auf den harten Kubus Bezug genommen und mit dem Brutalismus, spezifisch in der Schweizer Stadt Biel/Bienne auseinandergesetzt, welche nachhaltig in ihrem Stadtbild geprägt wurde. Dabei wird auf das Schlüsselwerk, dem Kongresshaus und dessen Architekt, Max Schlup, eingegangen.
+Im Design verfolgte man einen Rhythmus/ einen Fluss, welcher BesucherInnen in die lokal übliche Leserichtung, also nach rechts, lesen lässt, währenddem sich der Kubus und dessen Inhalt stets dagegen dreht. Dies verleiht der gesammten Seite eine gewisse Dynamik und animiert zum Spiel mit dem Kubus. Weiterhin verfolgte man im Laylout eine Ruhe mit genügend Weissraum, um den Fokus auf die klaren Kanten und Linien, sowie dem leicht freien Textinhalt, nicht zu stören. Es wurde sich klar an klassisch brutalistischem Design orientiert, jedoch mit einem dreidimensionalen Bezug auf den digitalen Raum der Webseite um so das brutalistische Design mit dessen Architektur zu kreuzen.
