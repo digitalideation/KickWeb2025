@@ -17,10 +17,10 @@ Term: Spring 2025, HSLU<br/>
 * Cavelti	Mira Lou: https://digitalideation.github.io/KickWeb2025/Studierende/Mira/Sprint_1_SVG_Fluidität_Funktioniert.html
 * Faoro	Tamara: https://digitalideation.github.io/KickWeb2025/Studierende/Tamara_Faoro/Sprint_1/test-plakat.html
 * Grande	Lukas Andrea: https://digitalideation.github.io/KickWeb2025/Studierende/Lukas/Sprint_1/
-* Jakob	Janina: https://digitalideation.github.io/KickWeb2025/Studierende/Janina/Sprint_1/def_grid.html
+* Jakob	Janina: https://digitalideation.github.io/KickWeb2025/Studierende/Janina/Sprint1/def_grid.html
 * Metz	Olivia Penelope: https://digitalideation.github.io/KickWeb2025/Studierende/Olivia/Sprint1/plakat.html
 * Müntener	Milena: https://digitalideation.github.io/KickWeb2025/Studierende/Milena/Abgabe1/Sprint_1.html
-* Musio	Leandro: https://digitalideation.github.io/KickWeb2025/Studierende/Leandro/Sprint1/KIWEB_Leandro Musio_Sprint_1/
+* Musio	Leandro: https://digitalideation.github.io/KickWeb2025/Studierende/Leandro/Sprint_1/KIWEB_Leandro Musio_Sprint_1/
 * Pathan	Karim: https://digitalideation.github.io/KickWeb2025/Studierende/Karim/sprint_1/
 * Roos	Tamara Joy: https://digitalideation.github.io/KickWeb2025/Studierende/Tamara_Roos/Sprint_1/Sprint_1_Plakat.html
 * Schranz	Matti: https://digitalideation.github.io/KickWeb2025/Studierende/Matti/Sprint_1/
