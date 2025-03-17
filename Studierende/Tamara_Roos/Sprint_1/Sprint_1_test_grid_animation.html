@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ef0000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            width: 100vw;
+            height: 100vh;
+            gap: 5px;
+            animation: resize 3000ms ease infinite both;
+        }
+
+        .item {
+            --color1: 36;
+            --delay: 0ms;
+            background-color: hsl(var(--color1), 100%, 60%);
+            animation: colorChange 3000ms ease var(--delay) infinite both;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 150px;
+            font-weight: bold;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(0, 0, 0);
+            transition: font-size 3000ms ease;
+        }
+
+        /* Unterschiedliche Verzögerungen für die Farbanimation */
+        .item:nth-child(4n - 2) {
+            --delay: 1000ms;
+        }
+
+        .item:nth-child(4n) {
+            --delay: 2000ms;
+        }
+
+        @keyframes colorChange {
+            0% { background-color: rgb(255, 238,0); }
+            25% { background-color:  rgb(255, 238,0); }
+            50% { background-color: rgb(255, 238,0); }
+            75% { background-color:  rgb(255, 238,0); }
+            100% { background-color:  rgb(255, 238,0); }
+        }
+
+        @keyframes resize {
+            0%, 100% {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+            }
+            
+            25% {
+                grid-template-columns: 1fr 2fr 1fr 2fr;
+                grid-template-rows: 1fr 2fr 1fr 2fr 1fr;
+            }
+            
+            50% {
+                grid-template-columns: 2fr 1fr 2fr 1fr;
+                grid-template-rows: 2fr 1fr 2fr 1fr 2fr;
+            }
+            
+            75% {
+                grid-template-columns: 3fr 1fr 3fr 1fr;
+                grid-template-rows: 3fr 1fr 3fr 1fr 3fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item">N</div>
+        <div class="item">O</div>
+        <div class="item"></div>
+        <div class="item">M</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item">R</div>
+        <div class="item">E</div>
+        <div class="item"></div>
+        <div class="item">R</div>
+        <div class="item">O</div>
+        <div class="item">O</div>
+        <div class="item">O</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item">M</div>
+    </div>
+</body>
+</html>
