@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olha</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%; 
+      overflow: hidden; 
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh; 
+      margin: 0; 
+      font-family: Arial, sans-serif;
+      background: black; 
+      padding: 20px; 
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between; 
+      background: black; 
+      gap: 20px; 
+      margin-bottom: 20px;
+    }
+
+    .top-row {
+      display: flex;
+      flex: 1 0 0; 
+      justify-content: space-evenly; 
+      gap: 20px;
+      height: 75vh
+    }
+
+    .horizontal-scroll {
+      flex: 1;
+      overflow-x: auto;
+      overflow-y: hidden; 
+      background: #E9E3D9;
+      padding: 10px;
+      white-space: nowrap; 
+    }
+
+    .horizontal-scroll::-webkit-scrollbar {
+      width: 0; 
+    }
+
+    .horizontal-scroll .content {
+      display: flex;
+      flex-direction: column; 
+      width: 300%;
+
+    }  
+
+    .vertical-scroll {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden; 
+      background:#E9E3D9;
+      padding: 10px;
+    }
+
+    .vertical-scroll::-webkit-scrollbar {
+      width: 0; 
+    }
+
+    .vertical-scroll .content {
+      height: 300%; 
+    }
+
+    .bottom-row {
+      height: 25vh; 
+      background: #E9E3D9;
+      text-align: center;
+      line-height: 25vh; 
+      padding: 10px;
+    }
+
+
+    .schrift1{
+      font-size: 200px;
+
+    }
+    #schrift13{
+      grid-row: 1/2; 
+      z-index: 2; 
+    }
+
+    .schrift2{
+      font-size: 80px;
+    }
+
+    .horizontal-scroll1{
+      /*display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0px*/
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="top-row">
+      <div class="horizontal-scroll">
+        <div class="horizontal-scroll1">
+          <div id="schrift1.1" class="content schrift1">
+          PARTS
+          </div>
+          <div id="schrift1.2" class="content schrift2">
+          &
+          </div>
+      </div>
+        
+        <div id="schrift13" class="content schrift1">
+          LABOUR
+        </div>
+      </div>
+
+
+      <div class="vertical-scroll">
+          <div id="child-1" class="content">    
+            <div id="child-1.1" class="content">
+              TO:
+            </div>
+            <div id="child-1.2" class="content">
+              QUARTRIÈME ÉTAGE <BR>7 RUE DE LA BOURSE, 31000 TOULOUSE-FR.
+            </div>
+          </div>  
+
+          <div id="child-2" class="content">    
+            <br id="child-2.1" class="content">
+              INVOICE №0001 <br>01-06-2021</br>
+            </div>
+          </div>   
+
+      </div>
+    </div>
+    <div class="bottom-row">
+      PARTS
+    </div>
+  </div>
+</body>
+</html>
