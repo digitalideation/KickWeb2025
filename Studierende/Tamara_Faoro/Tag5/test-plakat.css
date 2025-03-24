@@ -1,0 +1,539 @@
+
+
+@font-face {
+    font-family:'Hani' ;
+    src: url(/Tag5/Hani/Hani.woff2) format("woff2");
+}
+
+/*
+@font-face {
+    font-family:'Hani' ;
+    src: url(/Users/tamarafaoro/Documents/KickWeb/Hani/Hani.woff2) format("woff2");
+}
+*/
+
+h1 {
+    font-family: 'Hani';
+   
+}
+
+body{
+    animation: TheBackground 1s  forwards 5s ;
+    background-color: black;
+}
+
+article {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+* {
+    
+    
+    font-family: 'Hani';
+    font-size: 100px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 2fr 1fr 1fr ;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 200vh;
+    }
+
+    
+    
+    .divO { 
+        grid-area: 1 / 1 / 3 / 2; }
+    .divP { 
+        grid-area: 2 / 2 / 4 / 3; 
+    }
+    .divE { 
+        grid-area: 1 / 3 / 3 / 4; }
+     .divE-bottom-line { 
+         grid-area: 2 / 3 / 3 / 4; }
+    .divN { 
+        grid-area: 2 / 4 / 4/ 5; }
+    .divH { 
+        grid-area: 3 / 1 / 7/ 2; }
+    .divH2 { 
+            grid-area: 3 / 1 / 7/ 2; }
+    .divH-middle-line { 
+        grid-area: 6 / 1 / 7 / 2; }
+    .divO2 { 
+        grid-area: 6 / 2 / 8 / 3; }
+    .divU { 
+        grid-area: 5 / 3 / 7/ 4; }
+    .divS { 
+        grid-area: 7 / 3 / 9 / 4; }
+    .divE2 {
+         grid-area: 6 / 4 / 8 / 4; }
+     .divE2-bottom-line {
+            grid-area: 7 / 4 / 8 / 4; }
+
+
+
+
+@keyframes rect-slide{
+    0%{
+        transform: translateX(1000px);
+        width: 2000px;
+    }
+    100%{
+       
+        transform: translateX(0);
+        width: 100%;
+    }
+}
+
+@keyframes appearFont{
+    0%{
+        color: rgba(0, 0, 0, 0);
+        font-size: 5vh;
+        line-height: 5vh;
+    }
+    100% {
+        color: white;
+        font-size: 65vh;
+        line-height: 65vh;
+    }
+}
+
+/*
+@keyframes TheBackground{
+    0%{
+        background-color: black;
+    }
+    
+
+    100% {
+        background-color: rgb(35, 33, 73);
+
+    }
+}
+    */
+
+
+    @keyframes TheBackground {
+        0% {
+            background-color: black;
+        }
+        100% {
+            background-color: var(--bg-color);
+        }
+    }
+
+@keyframes bigO{
+    0%{
+        transform: translateX(-500px);
+        height: 1vh;
+    width: 1vh;
+    }
+    100% {
+        transform: translateX(-20);
+        height: 50vh;
+    width: 50vh;
+    }
+}
+
+@keyframes halftoneAppear {
+    0%{
+        background-color: rgba(255, 237, 0, 0);
+       
+
+    }
+    10% {
+        background-color: rgb(186, 177, 41);
+        
+    }
+    20%{
+        background-color: rgba(255, 237, 0, 0);
+       
+
+    }
+    100% {
+        background-color: rgba(255, 237, 0, 1);
+        
+    }
+}
+
+
+@keyframes bigH{
+    0%{
+        transform: translateY(500px);
+   
+    }
+    100% {
+        transform: translateY(0);
+ 
+    }
+}
+
+
+
+@keyframes rect-slide-slim{
+    0%{
+        transform: translateX(-200px);
+        width: 2000px;
+    }
+    100%{
+       
+        transform: translateX(0);
+        width: 100%;
+    }
+}
+
+@keyframes smallO{
+    0%{
+       
+        height: 1vh;
+    width: 1vh;
+    }
+    100% {
+        
+        height: 40vh;
+    width: 40vh;
+    }
+}
+
+
+@keyframes appearFont2{
+    0%{
+        transform: translateY(200px);
+   
+    }
+    100% {
+        transform: translateY(0);
+ 
+    }
+}
+
+
+@keyframes rect-slide2{
+    0%{
+        transform: translateX(500px);
+        width: 2000px;
+    }
+    100%{
+       
+        transform: translateX(0);
+        width: 100%;
+    }
+}
+
+
+    
+.rect-thick {
+    background-color: white;
+    height: 8vh;
+    z-index: 10;
+    margin-top: 10vh;
+    animation: rect-slide 2s  forwards ;
+
+}
+.rect-slim {
+    background-color: white;
+    height: 3vh;
+    width: 100%;
+    z-index: 10;
+    animation: rect-slide 2.5s  forwards ;
+    
+}
+
+.rect-slim2{
+    background-color: white;
+    height: 3vh;
+    
+    margin-top: 15vh;
+    animation: rect-slide-slim 2s  forwards ;
+    
+}
+
+.rect-thick2 {
+    background-color: white;
+    height: 8vh;
+    z-index: 10;
+    margin-top: 18vh;
+    animation: rect-slide 3s  forwards ;
+}
+
+
+.circle {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    border: 8vh solid white;
+    
+    transform: translate(-20vh);
+    margin-right: -10vw;
+    animation: bigO 2s  forwards ;
+}
+
+
+.circle2 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 5vh;
+    margin-top: 15vh;
+    animation: smallO 2s  forwards ;
+
+
+   
+}
+
+.rect-h {
+    background-color: white;
+    width: 5vw;
+    height: 88%;
+    margin-top: 10vh;
+    animation: bigH 2s  forwards ;
+
+}
+
+.rect-h2 {
+    background-color: white;
+    width: 5vw;
+    height: 88%;
+    margin-top: 10vh;
+    float: right;
+    animation: bigH 2.5s  forwards ;
+
+}
+
+h1 {
+        
+        margin: 0;
+        padding: 0;
+        transform: translate(0vh, -9vh);
+        z-index: 1;
+      
+    
+}
+
+.letterP {
+    animation: appearFont 2s forwards 2.5s;
+}
+.letterN {
+    animation: appearFont 2s forwards 2.5s;
+}
+
+
+
+.rect-thick3 {
+    background-color: white;
+    height: 8vh;
+    animation: rect-slide2 2s  forwards ;
+}
+.rect-slim3 {
+    background-color: white;
+    height: 3vh;
+    
+    margin-top: 25vh;
+    animation: rect-slide2 2.5s  forwards ;
+    
+}
+
+.rect-thick4 {
+    background-color: white;
+    height: 8vh;
+    animation: rect-slide2 3s  forwards ;
+    margin-top: 10vh;
+}
+
+.letterU {
+    margin-top: 2vh;
+    font-size: 65vh;
+     line-height: 65vh;
+    color: white;
+    animation: appearFont2 2s forwards ;
+}
+
+.letterS {
+    margin-top: 2vh;
+    font-size: 68vh;
+    line-height: 68vh;
+    color: white;
+    animation: appearFont2 2.5s forwards ;
+}
+
+
+.div-innerO { 
+    grid-area: 1 / 1 / 3 / 2; }
+.div-innerCircle1 { 
+    grid-area: 2 / 2 / 3 / 3; 
+}
+.div-innerRect1 { 
+    grid-area: 1 / 3 / 3 / 4; }
+
+.div-innerH { 
+    grid-area: 3 / 1 / 7/ 2; }
+
+.div-innerCircle2 { 
+    grid-area: 7 / 3 / 9 / 4; }
+.div-innerRect2 {
+     grid-area: 6 / 4 / 7 / 4; }
+
+
+.innerO {
+    border-radius: 50%;
+    height: 42vh;
+    width: 42vh;
+    transform: translate(-8svh);
+    margin-right: -10vw;
+    margin-top: 6vw;
+    animation: halftoneAppear 1s  forwards 6s;
+
+
+}    
+
+/*
+.parent:hover .innerO {
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, #232149 0.15rem, transparent 0
+    ), radial-gradient( circle at center, #232149 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    border-radius: 50%;
+    height: 42vh;
+    width: 42vh;
+    transform: translate(-8svh);
+    margin-right: -10vw;
+    margin-top: 6vw;
+    transition-duration: 500ms;
+    transition-delay: 3s;
+    transition-timing-function: ease-out;
+    
+}
+    */
+
+.innerCircle1 {
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+    margin-left: 21vh;
+    margin-top: 10vh;
+    animation: halftoneAppear 1s  forwards 6s;
+
+}
+
+/*
+ .div-innerCircle1:hover .innerCircle1{
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, #232149 0.15rem, transparent 0
+    ), radial-gradient( circle at center, #232149 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+    margin-left: 21vh;
+    margin-top: 10vh;
+    z-index: 10;
+    transition-duration: 300ms;
+    animation: halftoneAppear 1s  forwards 6s;
+
+}
+    */
+
+.innerRect1 {
+    height: 14vh;
+    width: 100%;
+    margin-top: 21vh;
+    animation: halftoneAppear 1s  forwards 6s;
+}
+
+
+/*
+.div-innerRect1:hover .innerRect1 {
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    height: 14vh;
+    width: 100%;
+    margin-top: 21vh;
+}
+*/
+
+.innerH {
+    
+    width: 11.5vw;
+    height: 62%;
+    margin-top: 10vh;
+    margin-left: 6.5vw;
+    animation: halftoneAppear 1s  forwards 6.5s;
+
+
+}
+
+/*
+.div-innerH:hover .innerH {
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    width: 11.5vw;
+    height: 62%;
+    margin-top: 10vh;
+    margin-left: 6.5vw;
+
+}
+    */
+
+.innerCircle2 {
+    border-radius: 50%;
+    height: 8vh;
+    width: 8vh;
+    margin-left: 14vh;
+    margin-top: 21vh;
+    animation: halftoneAppear 1s  forwards 7s;
+
+}
+
+/*
+.div-innerCircle2:hover .innerCircle2{
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    border-radius: 50%;
+    height: 8vh;
+    width: 8vh;
+    margin-left: 14vh;
+    margin-top: 11vh;
+    z-index: 10;
+}
+    */
+
+
+.innerRect2 {
+    animation: halftoneAppear 1s  forwards 7s;
+    height: 19vh;
+    width: 100%;
+    margin-top: 11vh;
+}
+
+/*
+.div-innerRect2:hover .innerRect2{
+    background-color: rgba(255, 237, 0, 1);
+    background-image: radial-gradient(
+        circle at center, black 0.15rem, transparent 0
+    ), radial-gradient( circle at center, black 0.15rem, transparent 0);
+    background-size: 0.5rem 0.5rem;
+    background-position: 0 0, 0.75rem 0.75rem;
+    height: 19vh;
+    width: 100%;
+    margin-top: 11vh;
+}
+
+*/
