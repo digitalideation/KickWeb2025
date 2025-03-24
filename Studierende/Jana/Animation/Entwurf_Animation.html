@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+        font-family: 'RobuckRounded';
+        src: url('fonts/RobuckRounded.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+        .Linie {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-direction: row;
+            background-color: rgb(255, 255, 255);
+            width: 100vw;
+            height: calc(100vh/8);
+        }
+        .item {
+            background-color: rgb(0, 0, 0);
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin: 3px;
+            transition-delay: 2s;   
+            
+        }
+        .item:hover { 
+            animation: none !important;
+            opacity: 1 !important;
+            background-color: rgb(0, 0, 0);
+            transition-duration: 0s;
+            transition-delay: 0s; 
+        }
+        .text {
+            text-align: center;
+            font-size: 14vh;
+            font-family: 'RobuckRounded'; 
+        }
+        .text:hover {
+            text-align: center;
+            font-size: 14vh;
+            font-family: 'RobuckRounded';
+            /*color: rgb(173, 0, 0);
+           /* scale: 150%;*/
+        }
+        .i1 {
+            flex-basis: 10px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i2 {
+            flex-basis: 300px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i3 {
+            flex-basis: 10px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i4 {
+            flex-basis: 300px;/* Basisbreite */
+            flex-grow: 0; /*Element soll wachsen*/
+            flex-shrink: 1;/*Element soll nicht schrumpfen*/
+        }
+        .i5 {
+            flex-basis: 10px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink:0;/*Element soll nicht schrumpfen*/
+        }
+        .i6 {
+            flex-basis: 130px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i7 {
+            flex-basis: 200px;/* Basisbreite */
+            flex-grow: 0; /*Element soll wachsen*/
+            flex-shrink: 1;/*Element soll nicht schrumpfen*/
+        }
+        .i8 {
+            flex-basis: 10px;/* Basisbreite */
+            flex-grow: 0; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i9 {
+            flex-basis: 200px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i10 {
+            flex-basis: 10px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i11 {
+            flex-basis: 130px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 1;/*Element soll nicht schrumpfen*/
+        }
+        .i12 {
+            flex-basis: 50px;/* Basisbreite */
+            flex-grow: 0; /*Element soll wachsen*/
+            flex-shrink: 1;/*Element soll nicht schrumpfen*/
+        }
+        .i13 {
+            flex-basis: 10px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i14 {
+            flex-basis: 200px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i15 {
+            flex-basis: 200px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i16 {
+            flex-basis: 800px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 1;/*Element soll nicht schrumpfen*/
+        }
+        .i17 {
+            flex-basis: 200px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 1;/*Element soll nicht schrumpfen*/
+        }
+        .i18 {
+            flex-basis: 200px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        .i19 {
+            flex-basis: 200px;/* Basisbreite */
+            flex-grow: 1; /*Element soll wachsen*/
+            flex-shrink: 0;/*Element soll nicht schrumpfen*/
+        }
+        @keyframes einaus_1 {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 1;
+            }
+            51% {
+            opacity: 0;
+              }
+            100%{
+                opacity: 0;
+            }
+            
+        }
+        .einaus_1{
+            animation-name: einaus_1;
+            animation-duration: 2.3s;
+            animation-iteration-count: infinite;
+        }
+        .einaus_2{
+            animation-name: einaus_1;
+            animation-duration: 3.6s;
+            animation-iteration-count: infinite;
+        }
+        .einaus_3{
+            animation-name: einaus_1;
+            animation-duration: 4.7s;
+            animation-iteration-count: infinite;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="Linie">
+        <div class="item i1 einaus_1"></div>
+        <div class="text">WHERE</div>
+        <div class="item i2 einaus_3"></div>
+    </div>
+    <div class="Linie">
+        <div class="item i3 einaus_3"></div>
+        <div class="text">THERE</div>
+        <div class="item i4 einaus_2"></div>
+    </div>
+    <div class="Linie">
+        <div class="item i5 einaus_3"></div>
+        <div class="text">IS</div>
+        <div class="item i6 einaus_1"></div>
+        <div class="text">NO</div>
+        <div class="item i7 einaus_1"></div>
+    </div>
+    <div class="Linie">
+        <div class="item i8 einaus_2"></div>
+        <div class="text">ORDER</div>
+        <div class="item i9 einaus_3"></div>
+    </div>
+    <div class="Linie">
+        <div class="item i10 einaus_2"></div>
+        <div class="text">THERE</div>
+        <div class="item i11 einaus_1"></div>
+        <div class="text">IS</div>
+        <div class="item i12 einaus_3"></div>
+    </div>
+    <div class="Linie">
+        <div class="item i13 einaus_1"></div>
+        <div class="item i14 einaus_2"></div>
+        <div class="item i15 einaus_3"></div>
+    </div>
+    <div class="Linie">
+        <div class="item i16 einaus_2"></div>
+        <div class="text">CHAOS</div>
+        <div class="item i17 einaus_1"></div>
+    </div>
+    <div class="Linie">
+        <div class="item i18 einaus_1"></div>
+        <div class="item i19 einaus_2"></div>
+    </div>
+
+    
+
+</body>
+
+</html>
