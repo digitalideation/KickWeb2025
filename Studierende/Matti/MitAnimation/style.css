@@ -1,0 +1,110 @@
+* {
+margin: 0;
+padding: 0;
+}
+.grid{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in; 
+    max-height: 100vh;
+}
+.gridoben{
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2.5fr 8.5fr 2.5fr 2fr 5.5fr 1fr;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out; 
+}
+.gridunten{
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2.5fr 8.5fr 2.5fr 2fr 5.5fr 1fr;
+    transition: 300ms;
+}
+
+.box{
+    border: 2px solid rgb(0, 0, 0); 
+    overflow: hidden;
+
+}
+.box img{
+height: 100%;
+width: 100%;
+object-fit: fill;
+}
+svg {
+    width: 100%;
+    height: 101%;
+    
+    }
+
+
+
+.gridoben:has(.first:hover){
+    grid-template-columns: 6fr 0.5fr 1fr 2fr 1fr 0.5fr 1.5fr 0.5fr;
+    background-color: green;
+}
+
+.gridoben:has(.second:hover){
+    grid-template-columns: 0.5fr 6fr 1fr 2fr 1fr 0.5fr 1.5fr 0.5fr;
+}
+
+.gridoben:has(.third:hover){
+    grid-template-columns:  0.5fr 0.5fr 6fr 2fr 1fr 0.5fr 1.5fr 0.5fr;
+}
+.gridoben:has(.fourth:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 6fr 1fr 0.5fr 1.5fr 0.5fr;
+}
+.gridoben:has(.fifth:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 2fr 6fr 0.5fr 1.5fr 0.5fr;
+}
+.gridoben:has(.sixth:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 2fr 1fr 6fr 1.5fr 0.5fr;
+}
+.gridoben:has(.seventh:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 2fr 1fr 0.5fr 6fr 0.5fr;
+}
+.gridoben:has(.eigth:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 2fr 1fr 0.5fr 1.5fr 6fr;
+}
+
+.gridunten:has(.first:hover){
+    grid-template-columns: 6fr 0.5fr 1fr 2fr 1fr 0.5fr 1.5fr 0.5fr;
+}
+
+.gridunten:has(.second:hover){
+    grid-template-columns: 0.5fr 6fr 1fr 2fr 1fr 0.5fr 1.5fr 0.5fr;
+}
+
+.gridunten:has(.third:hover){
+    grid-template-columns:  0.5fr 0.5fr 6fr 2fr 1fr 0.5fr 1.5fr 0.5fr;
+}
+.gridunten:has(.fourth:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 6fr 1fr 0.5fr 1.5fr 0.5fr;
+}
+.gridunten:has(.fifth:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 2fr 6fr 0.5fr 1.5fr 0.5fr;
+}
+.gridunten:has(.sixth:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 2fr 1fr 6fr 1.5fr 0.5fr;
+}
+.gridunten:has(.seventh:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 2fr 1fr 0.5fr 6fr 0.5fr;
+}
+.gridunten:has(.eigth:hover){
+    grid-template-columns:  0.5fr 0.5fr 1fr 2fr 1fr 0.5fr 1.5fr 6fr;
+}
+
+.grid:has(.gridoben:hover){
+    grid-template-rows: 5fr 1fr;
+    /*background: yellowgreen;*/
+}
+
+.grid:has(.gridunten:hover){
+    grid-template-rows: 1fr 5fr;
+    /*background-color: blue;*/
+}
