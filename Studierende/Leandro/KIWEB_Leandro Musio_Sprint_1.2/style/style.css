@@ -1,0 +1,240 @@
+@font-face {
+    font-family: lineal;
+    src: url(Lineal-Bold.ttf);
+}
+
+*{
+    font-family: lineal;
+}
+
+.full-img{
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    font-size: min(2vw, 2vh);
+}
+
+h2{
+    font-size: min(2.6vw, 2.6vh);
+}
+
+h1{
+    font-size: min(8.3vw, 8.3vh);
+}
+
+.line {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    width: 100%;
+    height: 0.1%;
+    background-color: black;
+}
+
+/*front*/
+.wall.front{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    filter: grayscale(1);
+    transition: filter 0.6s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.wall.front img{
+    position: absolute;
+    grid-area: 1/1/7/7;
+    z-index: 1;
+}
+
+.wall.front p{
+    margin: 0;
+    margin-left: min(3vw, 3vh);
+    margin-top: min(3vw, 3vh);
+    grid-area: 1/1/2/5;
+}
+
+.wall.front h1{
+    margin: 0;
+    margin-left: min(3vw, 3vh);
+    margin-top: min(3vw, 3vh);
+    grid-area: 5/1/7/4;
+}
+
+
+/*left*/
+.wall.left{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    filter: grayscale(1);
+    transition: filter 0.6s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.wall.left img{
+    position: absolute;
+    grid-area: 1/1/7/7;
+    z-index: 1;
+}
+
+.wall.left .small-img{
+    position: absolute;
+    top: min(3vw, 3vh);
+    right: min(3vw, 3vh);
+    width: 40%;
+    height: auto;
+}
+
+.wall.left p{
+    margin: 0;
+    margin-left: min(3vw, 3vh);
+    text-align: right;
+    position: absolute;
+    top: 57%;
+    right: 48%;
+    left: 6%;
+    transform: translateY(-50%);
+}
+
+.wall.left h1{
+    margin: 0;
+    margin-left: min(3vw, 3vh);
+    margin-top: min(3vw, 3vh);
+    margin-right: min(3vw, 3vh);
+    grid-area: 5/3/7/7;
+    text-align: right;
+}
+
+.wall.left h2{
+    position: absolute;
+    top: 42%;
+    left: 56%;
+}
+
+/*right*/
+.wall.right {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    filter: grayscale(1);
+    transition: filter 0.6s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.wall.right img {
+    position: absolute;
+    grid-area: 1/1/7/7;
+    z-index: 3;
+}
+
+.wall.right h1 {
+    margin: 0;
+    margin-left: min(3vw, 3vh);
+    margin-top: min(3vw, 3vh);
+    grid-area: 1/1/2/7;
+    z-index: 2;
+}
+
+.wall.right p {
+    margin: 0;
+    margin-left: min(3.9vw, 3.9vh);
+    margin-bottom: min(3vw, 3vh);
+    grid-area: 6/1/7/6;
+    z-index: 2;
+}
+
+.wall.right h2 {
+    margin: 0;
+    margin-right: min(3vw, 3vh);
+    grid-area: 5/6/6/7;
+}
+
+
+/*back*/
+.wall.back{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    filter: grayscale(1);
+    transition: filter 0.6s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.wall.back img{
+    position: absolute;
+    grid-area: 1/1/7/7;
+    z-index: 1;
+}
+
+.wall.back p{
+    text-align: center;
+    margin-left: min(3vw, 3vh);
+    grid-area: 1/1/4/4;
+}
+
+
+/*top*/
+.wall.top {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    filter: grayscale(1);
+    transition: filter 0.6s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.wall.top img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - min(3vw, 3vh));
+    height: calc(100% - min(3vw, 3vh));
+    z-index: 1;
+    margin-left: min(3vw, 3vh);
+    margin-bottom: min(3vw, 3vh);
+}
+
+.wall.top h1 {
+    grid-area: 3/6/6/7;
+    z-index: 0;
+    text-align: end;
+    margin: 0;
+    transform: rotate(-90deg) translateY(3.6vh) translateX(-1vw); 
+    transform-origin: left top;
+}
+
+
+/*bottom*/
+.wall.bottom {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    filter: grayscale(1);
+    transition: filter 0.6s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.wall.bottom img {
+    position: absolute;
+    grid-area: 1/1/7/7;
+    z-index: 1;
+}
+
+.wall.bottom p{
+    text-align: center;
+    margin-left: min(3vw, 3vh);
+    grid-area: 1/1/2/4;
+}
+
+
+@media (max-width: 515px) {
+    p{
+        font-size: min(1.5vw, 1.5vh);
+    }
+    
+    h2{
+        font-size: min(2vw, 2vh);
+    }
+    
+    h1{
+        font-size: min(6vw, 6vh);
+    }
+}
+
