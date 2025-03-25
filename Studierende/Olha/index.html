@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olha</title>
+  <title>Parts</title>
   <style>
     
     * {
@@ -24,7 +24,7 @@
       margin: 0; 
       font-family: Arial, sans-serif;
       background: black; 
-      padding: 20px; 
+      padding: 30px; 
     }
 
     .container {
@@ -33,16 +33,16 @@
       flex-grow: 1;
       justify-content: space-between; 
       background: black; 
-      gap: 20px; 
-      margin-bottom: 20px;
+      gap: 30px; 
+      margin-bottom: 30px;
     }
 
     .top-row {
       display: flex;
       flex: 1 0 0; 
       justify-content: space-evenly; 
-      gap: 20px;
-      height: 75vh
+      gap: 30px;
+      height: 59vh
     }
 
     .horizontal-scroll {
@@ -61,7 +61,7 @@
     .horizontal-scroll .content {
       display: flex;
       flex-direction: column; 
-      width: 300%;
+      width: 190%;
 
     }  
 
@@ -71,48 +71,88 @@
       overflow-x: hidden; 
       background:#E9E3D9;
       padding: 10px;
+      height: 100%; 
+      padding-top: 20px;
+
     }
 
     .vertical-scroll::-webkit-scrollbar {
       width: 0; 
     }
 
-    .vertical-scroll .content {
-      height: 300%; 
-    }
+  
 
     .bottom-row {
-      height: 25vh; 
+      height: 41vh; 
       background: #E9E3D9;
-      text-align: center;
-      line-height: 25vh; 
-      padding: 10px;
+      font-weight: 300;
+
     }
 
 
     .schrift1{
-      font-size: 200px;
-
+      font-size: 280px;
+      line-height: 220px;
+      font-weight: 900;
     }
-    #schrift13{
-      grid-row: 1/2; 
-      z-index: 2; 
+    #parts{
+      margin-top: -13px; 
     }
-
+     
     .schrift2{
       font-size: 80px;
+      line-height: 80px;
     }
 
     .horizontal-scroll1{
-      /*display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 0px*/
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-end;
+      
     }
+    
+    .justify{
+      font-size: 25px;
+      line-height: 25px;
+      padding: 40px 30px 20px 30px;
+      width: 100%;
+      text-align: justify;
+      /*text-align: center;*/
+      word-spacing: 62px;
+    }
+
+    .rows{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 112px;
+
+    }
+
+    #www{
+      word-spacing: 251px;
+      padding: 0 0 0 30px;
+    }
+
+    .at{
+      text-align: start;
+      padding: 40px 0 0 30px;
+    }
+    
+    #total{
+      text-align: center;
+      font-weight: 200;
+    }
+
+    #column1{
+      /*width: 10px;*/
+    }
+
+    .post{
+      margin-top: -115px;
+    }
+
     
 
   </style>
@@ -123,41 +163,95 @@
     <div class="top-row">
       <div class="horizontal-scroll">
         <div class="horizontal-scroll1">
-          <div id="schrift1.1" class="content schrift1">
-          PARTS
+          <div id="parts" class="content schrift1">
+            &nbsp; PARTS
           </div>
-          <div id="schrift1.2" class="content schrift2">
+          <div class="content schrift2">
           &
           </div>
       </div>
         
-        <div id="schrift13" class="content schrift1">
+        <div class="content schrift1">
           LABOUR
         </div>
       </div>
 
 
-      <div class="vertical-scroll">
-          <div id="child-1" class="content">    
-            <div id="child-1.1" class="content">
-              TO:
+      <div class="vertical-scroll content">
+        <div class="rows">
+          <div id="column1">    
+            <div>
+            TO: QUARTRIÈME ÉTAGE
             </div>
-            <div id="child-1.2" class="content">
-              QUARTRIÈME ÉTAGE <BR>7 RUE DE LA BOURSE, 31000 TOULOUSE-FR.
+            <div>
+            7 RUE DE LA BOURSE, 31000 TOULOUSE-FR.
             </div>
           </div>  
 
-          <div id="child-2" class="content">    
-            <br id="child-2.1" class="content">
-              INVOICE №0001 <br>01-06-2021</br>
-            </div>
-          </div>   
+          <div>    
+            INVOICE №0001 <br>01-06-2021
+          </div>
+        </div>
+        <div class="rows">
+          <div>    
+            <br>
+              DESCRIPTION :
+          </div>
+          <div>    
+            <br>
+              AMOUNT
+          </div>
+        </div>  
+        <div class="rows">
+          <div class="post">    
+            <br>
+              POST-PRODUCTION ( 3 DAYS ) <br> LOCATION SCOUTING <br>CAMERA, LENS AND GRIP RENTAL          </div>
+          <div class="post">    
+            <br>
+              $0,000.00 <br>$0,000.00 <br>$0,000.00
+          </div>  
+        </div>
+        <div class="rows">
+          <div>    
+            <br>
+              SUBTOTAL
+          </div>
+          <div>    
+            <br>
+            $0,000.00
+          </div>
+        </div>  
+        
+        <div class="rows">
+          <div>    
+            TAX
+        </div>
+
+        <div>    
+          $0,000.00
+        </div>
+        </div>
+          
+          <div id="total">    
+            <B>TOTAL : $0,000.00</B>
+          </div>
+          
+        </div>   
 
       </div>
     </div>
     <div class="bottom-row">
-      PARTS
-    </div>
+      <p class="justify">
+      <B>PARTS AND LABOUR IS A CREATIVE STUDIO WITH A ROSTER OF
+        AWARD WINNING ARTISTS AND DIRECTORS . WE ARE
+        CURRENTLY BASED IN LOS ANGELES , NEW YORK AND TORONTO .</B>
+      </p>
+   
+      <div>
+        <B><p class="at">@</p>
+          <p id="www" class="justify">WWW . PARTSANDLABOUR . COM</p></B>
+      </div>
+    </div>  
   </div>
 </body>
 </html>
