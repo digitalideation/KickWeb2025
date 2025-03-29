@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Plakat</title>
+    <link rel="stylesheet" href="test-plakat-tag6-2.css">
+
+   
+
+</head>
+
+<body>
+    <div class="parent">
+   
+    
+        <div class="divO">
+            <div class="circle">  </div> 
+        </div>
+        <div class="divP"> <h1 class="letterP">P</h1></div>
+        <div class="divE">
+            <div class="rect-thick"></div>
+        
+        </div>
+        <div class="divE-bottom-line ">
+            <div class="rect-slim"></div> 
+            <div class="rect-thick2"></div> 
+        </div> 
+        <div class="divN"> <h1 class="letterN">N</h1></div>
+        <div class="divH">
+            <div class="rect-h"></div> 
+        </div>
+        <div class="divH2">
+            <div class="rect-h2"></div>  
+        </div>
+
+
+        <div class="div-innerO">
+            <div class="innerO"></div>
+        </div>
+        <div class="div-innerCircle1">
+            <div class="innerCircle1"></div>
+        </div>
+        <div class="div-innerRect1">
+            <div class="innerRect1"></div>
+        </div>
+    
+
+
+
+
+        <div class="divH-middle-line ">
+            <div class="rect-slim2"></div> 
+        </div>
+        <div class="divO2">
+            <div class="circle2"></div>  </div>
+        <div class="divU"><h1 class="letterU">U</h1> </div>
+        <div class="divS"> <h1 class="letterS">S</h1></div>
+        <div class="divE2">   
+            <div class="rect-thick3"></div> 
+            <div class="rect-slim3"></div> 
+        </div>
+        <div class="divE2-bottom-line ">
+            <div class="rect-thick4"></div> 
+        </div>
+
+
+        
+        <div class="div-innerH">
+            <div class="innerH"></div>
+        </div>
+        <div class="div-innerCircle2">
+            <div class="innerCircle2"></div>
+        </div>
+        <div class="div-innerRect2">
+            <div class="innerRect2"></div>
+        </div>
+
+    
+
+
+    </div>
+
+    <script>
+        // Intersection Observer API
+        const animatedElements = document.querySelectorAll('.rect-slim2, .circle2, .letterU, .letterS, .rect-thick3, .rect-slim3, .rect-thick4, .innerH, .innerCircle2, .innerRect2');
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Restart the animation to force it to play
+                    entry.target.style.animation = 'none';
+                    void entry.target.offsetWidth; // Trigger reflow
+                    entry.target.style.animation = ''; // Reapply the original animation
+                    entry.target.style.animationPlayState = 'running';
+    
+                    // Stop observing the element after the animation plays once
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+    
+        // Pause all animations initially
+        animatedElements.forEach(element => {
+            element.style.animationPlayState = 'paused';
+            observer.observe(element);
+        });
+
+        
+    // Function to determine the background color based on the current time
+    function getBackgroundColor() {
+        const hour = new Date().getHours();
+        
+        if (hour >= 6 && hour < 12) {
+            return 'rgba(255, 223, 186, 1)'; // Morning: Soft golden
+        } else if (hour >= 12 && hour < 18) {
+            return 'rgba(135, 206, 235, 1)'; // Afternoon: Sky blue
+        } else if (hour >= 18 && hour < 21) {
+            return 'rgba(255, 140, 0, 1)'; // Evening: Orange glow
+        } else {
+            return 'rgba(10, 25, 47, 1)'; // Night: Dark blue
+        }
+    }
+
+    // Apply the dynamic background color
+    document.documentElement.style.setProperty('--bg-color', getBackgroundColor());
+
+
+
+
+    </script>
+    
+
+  
+
+</body>
+
+</html>
