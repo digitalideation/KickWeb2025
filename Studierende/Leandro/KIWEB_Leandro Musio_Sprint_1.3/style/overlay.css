@@ -1,0 +1,47 @@
+@font-face {
+    font-family: lineal;
+    src: url(Lineal-Bold.ttf);
+}
+@font-face {
+    font-family: outward;
+    src: url(outward-block.ttf);
+}
+@font-face {
+    font-family: outward borders;
+    src: url(outward-borders.ttf);
+}
+
+.overlay{
+    font-family: lineal;
+    line-height: 0.9;
+}
+
+.overlay h1{
+    font-size: min(29vh, 29vh);
+}
+
+.h1-1{
+    margin: 0;
+    margin-top: 11vh;
+    margin-right: 3vw;
+    padding: 0;
+    text-align: left;
+}
+
+.h1-2{
+    margin: 0;
+    margin-right: 3vw;
+    padding: 0;
+    justify-self: flex-end;
+    text-align: left;
+}
+
+#js-canvas {
+    position: relative;            
+    margin: 0;
+    width: 100vw;
+    height: 600vh;
+    background: none;
+    pointer-events: none;
+    display: block;
+}

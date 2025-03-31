@@ -1,0 +1,30 @@
+
+.wall.front:hover{
+    filter: grayscale(0);
+    background-color: #d4d4d4;
+}
+
+.wall.back:hover{
+    filter: grayscale(0);
+    background-color: #d4d4d4
+}
+
+.wall.top:hover{
+    filter: grayscale(0);
+    background-color: #d4d4d4
+}
+
+.wall.bottom:hover{
+    filter: grayscale(0);
+    background-color: #d4d4d4
+}
+
+.wall.left:hover{
+    filter: grayscale(0);
+    background-color: #d4d4d4
+}
+
+.wall.right:hover{
+    filter: grayscale(0);
+    background-color: #d4d4d4
+}
