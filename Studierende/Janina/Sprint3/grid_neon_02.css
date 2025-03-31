@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Futura-Medium, Futura;
+    min-height: 100vh;
+    width: 100vw;
+    background: #000;
+  }
+  /* Grid jetzt einzeln*/
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    min-height: 100vh;
+    width: 100vw;
+    grid-auto-rows: 1fr;
+    z-index: 1;
+  }
+  
+  /* übernommen von grid*/
+  .grid-text {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .hellgrau, .dunkelgrau {
+    width: 100%;
+    height: 100%;
+  }
+  .hellgrau {
+    background-color: lightgray;
+  }
+  .dunkelgrau {
+    background-color: rgb(82, 82, 82);
+  }
+ 
+  .hellgrau:hover{
+   transform: scale(1.1) ;
+   background-image: url('Bilder/Bali_01.jpg');
+  } 
+  
+  
+  .dunkelgrau:hover {
+   transform: scale(1.1) ;
+   background-image: url('Bilder/Bali_02.jpg');
+ }
+ 
+ 
+  /*bei schriften überneinader*/
+  .mix-text {
+    mix-blend-mode: multiply;
+  }
+  .overlap-text {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 5;
+    font-size: 8vw;
+  }
+  .overlap-text2 {
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    z-index: 4;
+    font-size: 8vw;
+  }
+  .grid-text div {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 1s forwards;
+  }
+ 
+  @keyframes fadeSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .grid-text div:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+  .grid-text div:nth-child(2) {
+    animation-delay: 0.8s;
+  }
+  .grid-text div:nth-child(3) {
+    animation-delay: 1.2s;
+  }
+  .grid-text div:nth-child(4) {
+    animation-delay: 1.6s;
+  }
+  .grid-text div:nth-child(5) {
+    animation-delay: 2s;
+  }
+  .grid-text div:nth-child(6) {
+    animation-delay: s;
+  }
+  .grid-text div:nth-child(7) {
+    animation-delay: 1.4s;
+  }
+ 
+
+
+  
+  /* Media Queries */
+  @media (max-width: 640px) {
+    @media (max-width: 640px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(12, 1fr);
+          min-height: 100vh;
+        }
+      
+        .grid-text {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(12, 1fr);
+          min-height: 100vh;
+          height: auto;
+        }
+      }
+ 
+   .cls-2-portfolio,
+   .cls-jakob,
+   .janina {
+     font-size: 5vw;
+   }
+ 
+   .janina,
+   .cls-1-digital {
+     writing-mode: horizontal-tb;
+   }
+ 
+   .hellgrau:hover,
+   .dunkelgrau:hover {
+     transform: none;
+   }
+ 
+   .hellgrau {
+     background-image: url('Bali_01.jpg');
+     background-size: cover;
+     background-position: center;
+     background-color: transparent;
+   }
+ 
+   .dunkelgrau {
+     background-image: url('Bali_02.jpg');
+     background-size: cover;
+     background-position: center;
+     background-color: transparent;
+   }
+ }
+ 
