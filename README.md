@@ -21,12 +21,10 @@ GitHub Pages:
 Repo:  https://github.com/HabbaTehJutt/FS25-KICKWEB-MC.git<br/>
 GitHub Pages: https://habbatehjutt.github.io/FS25-KICKWEB-MC/
 * <b>Faoro	Tamara</b><br/>
-Repo:  https://github.com/Tama-fao/FS25-KICKWEB.git
-<br/>
+Repo:  https://github.com/Tama-fao/FS25-KICKWEB.git<br/>
 GitHub Pages: https://tama-fao.github.io/FS25-KICKWEB/
 * <b>Grande	Lukas Andrea</b><br/>
-Repo: https://github.com/lukasgrande/KickWeb
-<br/>
+Repo: https://github.com/lukasgrande/KickWeb<br/>
 GitHub Pages: https://lukasgrande.github.io/KickWeb/
 * <b>Jakob	Janina</b><br/>
 Repo:  <br/>
@@ -41,12 +39,10 @@ GitHub Pages:
 Repo: https://github.com/len6i/DI_KIWEB_FS25.git  <br/>
 GitHub Pages: https://len6i.github.io/DI_KIWEB_FS25/
 * <b>Pathan	Karim</b><br/>
-Repo:  https://github.com/KarimPathan/FS25-KICKWEB.git
-<br/>
+Repo:  https://github.com/KarimPathan/FS25-KICKWEB.git<br/>
 GitHub Pages: https://karimpathan.github.io/FS25-KICKWEB/
 * <b>Roos	Tamara Joy</b><br/>
-Repo: 
-https://tamararoos.github.io/FS25-KICKWEB/ <br/>
+Repo: https://tamararoos.github.io/FS25-KICKWEB/ <br/>
 GitHub Pages: https://github.com/tamararoos/FS25-KICKWEB.git
 * <b>Schranz	Matti</b><br/>
 Repo: https://github.com/mattisch21/FS25-KICKWEB <br/>
@@ -55,8 +51,7 @@ GitHub Pages: https://mattisch21.github.io/FS25-KICKWEB/
 Repo: https://github.com/Zulate/FS25-KICKWEB <br/>
 GitHub Pages: https://zulate.github.io/FS25-KICKWEB/
 * <b>Stocker	Jana Maria</b><br/>
-Repo: https://github.com/Jana030503/FS25-KICKWEB.git
-<br/>
+Repo: https://github.com/Jana030503/FS25-KICKWEB.git<br/>
 GitHub Pages: https://jana030503.github.io/FS25-KICKWEB/ 
 * <b>Turano	Iacopo</b><br/>
 Repo:  <br/>
