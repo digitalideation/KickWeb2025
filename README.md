@@ -12,21 +12,55 @@ https://github.com/digitalideation/KickWeb2025/wiki <br/><br/>
 Instructor: Hanna Züllig<br/>
 Term: Spring 2025, HSLU<br/>
 
-### Sprint 1
-* Adruzhenko	Olha: https://digitalideation.github.io/KickWeb2025/Studierende/
-* Cavelti	Mira Lou: https://digitalideation.github.io/KickWeb2025/Studierende/Mira/Sprint_1_SVG_Fluidität_Funktioniert.html
-* Faoro	Tamara: https://digitalideation.github.io/KickWeb2025/Studierende/Tamara_Faoro/Sprint_1/test-plakat.html
-* Grande	Lukas Andrea: https://digitalideation.github.io/KickWeb2025/Studierende/Lukas/Sprint_1/
-* Jakob	Janina: https://digitalideation.github.io/KickWeb2025/Studierende/Janina/Sprint1/def_grid.html
-* Metz	Olivia Penelope: https://digitalideation.github.io/KickWeb2025/Studierende/Olivia/Sprint1/plakat.html
-* Müntener	Milena: https://digitalideation.github.io/KickWeb2025/Studierende/Milena/Abgabe1/Sprint_1.html
-* Musio	Leandro: https://digitalideation.github.io/KickWeb2025/Studierende/Leandro/Sprint_1/KIWEB_Leandro Musio_Sprint_1/
-* Pathan	Karim: https://digitalideation.github.io/KickWeb2025/Studierende/Karim/sprint_1/
-* Roos	Tamara Joy: https://digitalideation.github.io/KickWeb2025/Studierende/Tamara_Roos/Sprint_1/Sprint_1_Plakat.html
-* Schranz	Matti: https://digitalideation.github.io/KickWeb2025/Studierende/Matti/Sprint_1/
-* Stalder	Marco: https://github.com/Zulate/FS25-KICKWEB
-* Stocker	Jana Maria: https://digitalideation.github.io/KickWeb2025/Studierende/Jana/Sprint_1/Projekt1.html
-* Turano	Iacopo: https://digitalideation.github.io/KickWeb2025/Studierende/Iacopo/Sprint 1/sprint_1.html
+# Students
+### Repositories and GitHub Pages
+* <b>Adruzhenko	Olha </b><br/>
+Repo:  <br/>
+GitHub Pages:
+* <b>Cavelti	Mira Lou</b><br/>
+Repo:  https://github.com/HabbaTehJutt/FS25-KICKWEB-MC.git<br/>
+GitHub Pages: https://habbatehjutt.github.io/FS25-KICKWEB-MC/
+* <b>Faoro	Tamara</b><br/>
+Repo:  https://github.com/Tama-fao/FS25-KICKWEB.git
+<br/>
+GitHub Pages: https://tama-fao.github.io/FS25-KICKWEB/
+* <b>Grande	Lukas Andrea</b><br/>
+Repo: https://github.com/lukasgrande/KickWeb
+<br/>
+GitHub Pages: https://lukasgrande.github.io/KickWeb/
+* <b>Jakob	Janina</b><br/>
+Repo:  <br/>
+GitHub Pages:
+* <b>Metz	Olivia Penelope</b><br/>
+Repo:  <br/>
+GitHub Pages:
+* <b>Müntener	Milena</b><br/>
+Repo:  <br/>
+GitHub Pages:
+* <b>Musio	Leandro</b><br/>
+Repo: https://github.com/len6i/DI_KIWEB_FS25.git  <br/>
+GitHub Pages: https://len6i.github.io/DI_KIWEB_FS25/
+* <b>Pathan	Karim</b><br/>
+Repo:  https://github.com/KarimPathan/FS25-KICKWEB.git
+<br/>
+GitHub Pages: https://karimpathan.github.io/FS25-KICKWEB/
+* <b>Roos	Tamara Joy</b><br/>
+Repo: 
+https://tamararoos.github.io/FS25-KICKWEB/ <br/>
+GitHub Pages: https://github.com/tamararoos/FS25-KICKWEB.git
+* <b>Schranz	Matti</b><br/>
+Repo: https://github.com/mattisch21/FS25-KICKWEB <br/>
+GitHub Pages: https://mattisch21.github.io/FS25-KICKWEB/
+* <b>Stalder	Marco</b><br/>
+Repo: https://github.com/Zulate/FS25-KICKWEB <br/>
+GitHub Pages: https://zulate.github.io/FS25-KICKWEB/
+* <b>Stocker	Jana Maria</b><br/>
+Repo: https://github.com/Jana030503/FS25-KICKWEB.git
+<br/>
+GitHub Pages: https://jana030503.github.io/FS25-KICKWEB/ 
+* <b>Turano	Iacopo</b><br/>
+Repo:  <br/>
+GitHub Pages:
   
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
