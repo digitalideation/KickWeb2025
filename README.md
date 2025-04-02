@@ -27,14 +27,14 @@ GitHub Pages: https://tama-fao.github.io/FS25-KICKWEB/
 Repo: https://github.com/lukasgrande/KickWeb<br/>
 GitHub Pages: https://lukasgrande.github.io/KickWeb/
 * <b>Jakob	Janina</b><br/>
-Repo:  <br/>
-GitHub Pages:
+Repo: https://github.com/JaninaJakob/FS25-KICKWEB<br/>
+GitHub Pages:  https://janinajakob.github.io/FS25-KICKWEB/ 
 * <b>Metz	Olivia Penelope</b><br/>
 Repo:  <br/>
 GitHub Pages:
 * <b>Müntener	Milena</b><br/>
-Repo:  <br/>
-GitHub Pages:
+Repo: https://github.com/MilenaMuentener/FS25-KICKWEB<br/>
+GitHub Pages: https://milenamuentener.github.io/FS25-KICKWEB/ 
 * <b>Musio	Leandro</b><br/>
 Repo: https://github.com/len6i/DI_KIWEB_FS25.git  <br/>
 GitHub Pages: https://len6i.github.io/DI_KIWEB_FS25/
@@ -54,8 +54,8 @@ GitHub Pages: https://zulate.github.io/FS25-KICKWEB/
 Repo: https://github.com/Jana030503/FS25-KICKWEB.git<br/>
 GitHub Pages: https://jana030503.github.io/FS25-KICKWEB/ 
 * <b>Turano	Iacopo</b><br/>
-Repo:  <br/>
-GitHub Pages:
+Repo: https://github.com/turanoiacopo/FS25-KICKWEB <br/>
+GitHub Pages: https://turanoiacopo.github.io/FS25-KICKWEB/
   
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
