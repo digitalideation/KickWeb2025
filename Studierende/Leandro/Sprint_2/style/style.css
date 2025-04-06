@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    background-color: #e3e3e3;
+  }
+
+  .scene {
+    opacity: 0;
+    perspective: 10vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.1s ease-in;
+  }
+
+  .room {
+    width: 70vh;
+    height: 70vh;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateZ(-20deg) rotateY(30deg) rotateX(20deg);
+    transition: transform 0.1s linear;
+  }
+
+  .wall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e3e3e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .front  { transform: translateZ(35vh) rotateY(-180deg); }
+  .back   { transform: translateZ(-35vh); }
+  .right   { transform: translateX(-35vh) rotateY(90deg); }
+  .left  { transform: translateX(35vh) rotateY(-90deg); }
+  .top    { transform: translateY(-35vh) rotateX(-90deg); }
+  .bottom { transform: translateY(35vh) rotateX(90deg); }
+
+
+   /* Scrollable Overlay */
+   .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+        z-index: 1000;
+    }
+
+    .box {
+        position: relative;            
+        margin: 0;
+        width: 100vw;
+        height: 1000vh;
+        background: none;
+        pointer-events: all;
+        display: block;
+    }
+
+    .section.top-over{
+        background: linear-gradient(0deg, #e3e3e300 0%, #e3e3e37b 10%, #e3e3e3 20%);
+        position: absolute;
+        width: 100vw;
+        height: 120vh;
+        right: 0;
+    }
+
+    .section.top-over h1 {
+        transform: translateX(-50%);
+        transition: top 0.3s ease-out;
+    }
+
+    .section.buffer-1{
+        position: relative;
+        top: 200vh;
+        width: 100vw;
+        height: 240vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .section.two-over{
+        position: absolute;
+        top: 460vh;
+        width: 100vw;
+        height: 160vh;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .section.bottom-over{
+        position: absolute;
+        padding: 0;
+        top: 910vh;
+        width: 100vw;
+        height: 80vh;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 520px) {
+        .scene{
+            perspective: 35vh;
+        }
+    }
+
+
+
+
+
+

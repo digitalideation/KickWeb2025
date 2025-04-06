@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Seite</title>
+    <link rel="stylesheet" href="style/cube.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/overlay.css">
+</head>
+<body>
+
+    <div class="scene">
+        <div class="room" id="room">
+            <div class="wall front kongresshaus" data-side="front">
+                <p>Durch den wirtschaftlichen und demografischen Wandel gewannen schweizweit brutalistische Bauten zeitgenössisch an Bedeutung.</p>
+                <h1 class="link-1">Haus</h1>
+                <img class="full-img img-0" src="bilder/Comp_Kongresshaus_Flügel_1_C.png" alt="couldnt load">
+            </div>
+
+            <div class="wall left" data-side="left">
+                <p>Das von Max Schlup designte Kongresshaus in Biel/Bienne ist ein Wahrzeichen der Stadt und <br>steht führ den wirtschaft- <br>lichen Aufschwung <br>der Stadt im 20.<br>Jahrhundert.</p>
+                    <h2>1966</h2>
+                    <h1 class="link-1">Kongress</h1>
+                    <img class="full-img img-1" src="bilder/Comp_Kongresshaus_2_C.png" alt="couldnt load">
+                    <img class="small-img img-2" src="bilder/Comp_Kongresshaus_Eingang_C.png" alt="couldnt load">
+            </div>
+
+            <div class="wall right kongresshaus" data-side="right">
+                <div class="line"></div>
+                <p>Max Schlup besuchte in Biel die Grundschulen, lernte Hochbauzeichner und studierte von 1933 bis 1939 Architektur am Technikum in Biel. 1948 eröffnete er dort auch sein eigenes Architekturbüro und seine Bauten definiertennoch heute das Stadtbild Biels <br>und die Architekturgeschichte der Region.</p>
+                    <h2> -09.06.1917<br> † 11.02.2013</h2>
+                    <h1 class="link-2">Max Schlup</h1>
+                    <img class="full-img img-0" src="bilder/Comp_Kongresshaus_Flügel_2_C.png" alt="couldnt load">
+            </div>
+
+            <div class="wall back" data-side="back">
+                <div class="line"></div>
+                <img class="full-img img-4" src="bilder/Comp_Kongresshaus_1_C.png" alt="couldnt load">
+                <p>Mit Betonung einer geometrischen Ordnung und die Vorliebe für zeitgemässe Materialien wie <br>Stahl und Glas.</p>
+            </div>
+
+            <div class="wall top" data-side="top">
+                <img class="full-img img-5" src="bilder/Comp_Wohnblock_1.png" alt="couldnt load">
+            </div>
+
+            <div class="wall bottom" data-side="bottom">
+                <img class="full-img img-6" src="bilder/Comp_Kongresshaus_Skulptur_c.png" alt="couldnt load">
+                <p>In den 1960er- und 1970er-Jahren erlebte die Stadt eine Phase intensiver Modernisierung.</p>
+            </div>
+
+        </div>
+    </div>
+
+     <div class="overlay">
+        <canvas id="canvas-1"></canvas>
+        <div class="box">
+            <div class="section top-over">
+                <h1 class="h1-1">Biel/</h1>
+                <h1 class="h1-2">Brutalismus</h1>
+                <h1 class="h1-3">Bienne</h1>
+            </div>
+
+            <div class="section buffer-1">
+                <p class="p-bfo-1">Der Bieler Brutalismus spielte eine zentrale Rolle in der Entwicklung der Schweizer Nachkriegsarchitektur. In der industriell geprägten Stadt entstand ein besonders konsequenter und funktionaler Baustil, der durch rohe Materialien, klare Strukturen und eine starke Betonästhetik gekennzeichnet war.</p>
+                <p class="p-bfo-2">Der Bieler Brutalismus gilt heute als bedeutendes Beispiel für die Umsetzung internationaler Architekturströmungen im lokalen Kontext und steht für eine ehrliche, zweckorientierte Bauweise.</p>
+            </div>
+
+            <div class="section two-over">
+                <h1 class="h1-4">Max <br>Schlup</h1>
+                <p class="more-2o">Mehr unter <br><a href="https://www.architekturbibliothek.ch/architekt/schlup-max/">Architekturbibliothek</a></p>
+                <p class="p-2o">Max Schlup war ein Schweizer Architekt und Vertreter der Solothurner Schule, einem regionalen Baustil des Brutalismus. Mit rohem Beton und klaren Formen prägte er die Architektur der Nachkriegszeit, etwa mit dem Kongresshaus in Biel.</p>
+            </div>
+
+            <div class="section bottom-over">
+                <h1 class="h1-5">Kongress</h1>
+                <p class="p-bo">Das Kongresshaus in Biel, 1968 fertiggestellt, sticht durch sein markantes, geometrisches Design und die rohen Betonstrukturen in der Stadt hervor und machen es zu einem wichtigen Teil des architektonischen Erbes von Biel sowie zu einem Symbol für die Innovation der Mitte des 20. Jahrhunderts.</p>
+                <p class="more-bo">Mehr unter <br>
+                    <a href="https://www.architekturbibliothek.ch/bauwerk/kongresshaus-mit-hallenbad/" target="_blank"> Architekturbibliothek</a>
+                </p>
+                <h1 class="h1-6">Haus</h1>
+            </div>
+
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
