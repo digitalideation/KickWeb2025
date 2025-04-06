@@ -30,8 +30,8 @@ GitHub Pages: https://lukasgrande.github.io/KickWeb/
 Repo: https://github.com/JaninaJakob/FS25-KICKWEB<br/>
 GitHub Pages:  https://janinajakob.github.io/FS25-KICKWEB/ 
 * <b>Metz	Olivia Penelope</b><br/>
-Repo:  <br/>
-GitHub Pages:
+Repo: https://github.com/ulimuli13/FS25-KICKWEB.git <br/>
+GitHub Pages: https://ulimuli13.github.io/FS25-KICKWEB/
 * <b>Müntener	Milena</b><br/>
 Repo: https://github.com/MilenaMuentener/FS25-KICKWEB<br/>
 GitHub Pages: https://milenamuentener.github.io/FS25-KICKWEB/ 
@@ -42,8 +42,8 @@ GitHub Pages: https://len6i.github.io/DI_KIWEB_FS25/
 Repo:  https://github.com/KarimPathan/FS25-KICKWEB.git<br/>
 GitHub Pages: https://karimpathan.github.io/FS25-KICKWEB/
 * <b>Roos	Tamara Joy</b><br/>
-Repo: https://tamararoos.github.io/FS25-KICKWEB/ <br/>
-GitHub Pages: https://github.com/tamararoos/FS25-KICKWEB.git
+Repo: https://github.com/tamararoos/FS25-KICKWEB.git<br/>
+GitHub Pages: https://tamararoos.github.io/FS25-KICKWEB/ 
 * <b>Schranz	Matti</b><br/>
 Repo: https://github.com/mattisch21/FS25-KICKWEB <br/>
 GitHub Pages: https://mattisch21.github.io/FS25-KICKWEB/
