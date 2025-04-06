@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janina Jakob – Kickweb 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #000;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 16vw, 12rem);
+      font-weight: bold;
+      text-align: center;
+      text-shadow:
+        0 0 10px rgb(2, 2, 2),
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 80px #00ffff;
+    }
+
+    .button-full {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .button-full a {
+      display: block;
+      width: 100%;
+      padding: 1.5rem;
+      font-size: 2rem;
+      text-align: center;
+      text-decoration: none;
+      background-color: rgb(82, 82, 82);
+      color: white;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+      border: 2px solid #00ffff;
+    }
+
+    .button-full a:hover {
+      background-color: #00ffff;
+      color: black;
+      transform: scale(1.05);
+      box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+    }
+
+
+    
+
+    .button-row {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      max-width: 1000px;
+      justify-content: center;
+    }
+
+    .button-row a {
+      flex: 1;
+      padding: 1.2rem;
+      font-size: 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      background-color: rgb(82, 82, 82);
+      color: white;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      border: 2px solid #00ffff;
+    }
+
+    .button-row a:hover {
+      background-color: #00ffff;
+      color: black;
+      transform: scale(1.05);
+      box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+    }
+
+    .footer-text {
+      margin-top: auto;
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .button-row {
+        flex-direction: column;
+      }
+
+      .button-row a {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Janina Jakob</h1>
+
+  <div class="button-full">
+    <a href="Github/Inspirationen/inspirationen_bilder.html">Inspirationen</a>
+    
+    
+  </div>
+
+
+  <div class="button-row">
+    <a href="Github/Sprint1/def_grid.html">Sprint 1</a>
+    <a href="Github/Sprint2/grid_02a.html">Sprint 2</a>
+    <a href="Github/Definitiv/definitives_grid.html">Definitiv</a>
+  </div>
+
+  <div class="footer-text">
+    Digital Ideation • KickWeb • 2025
+  </div>
+
+</body>
+</html>
+
