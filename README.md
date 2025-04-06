@@ -15,8 +15,8 @@ Term: Spring 2025, HSLU<br/>
 # Students
 ### Repositories and GitHub Pages
 * <b>Adruzhenko	Olha </b><br/>
-Repo:  <br/>
-GitHub Pages:
+Repo: https://github.com/ol-add/FS25-KICKWEB.git <br/>
+GitHub Pages: https://ol-add.github.io/FS25-KICKWEB/
 * <b>Cavelti	Mira Lou</b><br/>
 Repo:  https://github.com/HabbaTehJutt/FS25-KICKWEB-MC.git<br/>
 GitHub Pages: https://habbatehjutt.github.io/FS25-KICKWEB-MC/
