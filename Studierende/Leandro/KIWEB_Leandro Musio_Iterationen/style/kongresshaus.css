@@ -1,0 +1,27 @@
+@font-face {
+    font-family: lineal;
+    src: url(Lineal-Bold.ttf);
+}
+
+*{
+    font-family: lineal;
+}
+
+.full-img{
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    font-size: min(2vw, 2vh);
+}
+
+h2{
+    font-size: min(2.6vw, 2.6vh);
+}
+
+h1{
+    font-size: min(8.3vw, 8.3vh);
+}
+
+

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Seite</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/overlay.css">
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        user-select: none;
+        background-color: #e3e3e3;
+      }
+
+    
+
+      .scene {
+        opacity: 0.1;
+        perspective: 10vw;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.1s ease-in;
+      }
+
+      .room {
+        width: 70vh;
+        height: 70vh;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateZ(-20deg) rotateY(30deg) rotateX(20deg);
+        transition: transform 0.1s linear;
+      }
+
+      .wall {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #e3e3e3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .front  { transform: translateZ(35vh) rotateY(-180deg); }
+      .back   { transform: translateZ(-35vh); }
+      .right   { transform: translateX(-35vh) rotateY(90deg); }
+      .left  { transform: translateX(35vh) rotateY(-90deg); }
+      .top    { transform: translateY(-35vh) rotateX(-90deg); }
+      .bottom { transform: translateY(35vh) rotateX(90deg); }
+
+
+       /* Scrollable Overlay */
+       .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+            z-index: 1000;
+        }
+
+        .box {
+            position: relative;            
+            margin: 0;
+            width: 100vw;
+            height: 600vh;
+            background: none;
+            pointer-events: all;
+            display: block;
+        }
+
+        .section.buffer-1{
+            width: 100vw;
+            height: 60vh;
+        }
+
+        .section.top-over{
+            background: linear-gradient(0deg, #e3e3e300 0%, #e3e3e37b 10%, #e3e3e3 20%);
+            position: absolute;
+            width: 100vw;
+            height: 120vh;
+            right: 0;
+        }
+
+        .section.two-over{
+            background: #e3e3e3;
+            position: relative;
+            top: 189vh;
+            width: 100vw;
+            height: 80vh;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scene">
+        <div class="room" id="room">
+            <div class="wall front kongresshaus" data-side="front">
+                <p>Durch den wirtschaftlichen und demografischen Wandel gewannen schweizweit brutalistische Bauten zeitgenössisch an Bedeutung.</p>
+                <h1 class="link-1">Haus</h1>
+                <img class="full-img img-0" src="bilder/Comp_Kongresshaus_Flügel_1_C.png" alt="couldnt load">
+            </div>
+
+            <div class="wall left" data-side="left">
+                <p>Das von Max Schlup designte Kongresshaus in Biel/Bienne ist ein Wahrzeichen der Stadt und <br>steht führ den wirtschaft- <br>lichen Aufschwung <br>der Stadt im 20.<br>Jahrhundert.</p>
+                    <h2>1966</h2>
+                    <h1 class="link-1">Kongress</h1>
+                    <img class="full-img img-1" src="bilder/Comp_Kongresshaus_2_C.png" alt="couldnt load">
+                    <img class="small-img img-2" src="bilder/Comp_Kongresshaus_Eingang_C.png" alt="couldnt load">
+            </div>
+
+            <div class="wall right kongresshaus" data-side="right">
+                <div class="line"></div>
+                <p>Max Schlup besuchte in Biel die Grundschulen, lernte Hochbauzeichner und studierte von 1933 bis 1939 Architektur am Technikum in Biel. 1948 eröffnete er dort auch sein eigenes Architekturbüro und seine Bauten definiertennoch heute das Stadtbild Biels <br>und die Architekturgeschichte der Region.</p>
+                    <h2> -09.06.1917<br> † 11.02.2013</h2>
+                    <h1 class="link-2">Max Schlup</h1>
+                    <img class="full-img img-0" src="bilder/Comp_Kongresshaus_Flügel_2_C.png" alt="couldnt load">
+            </div>
+
+            <div class="wall back" data-side="back">
+                <div class="line"></div>
+                <img class="full-img img-4" src="bilder/Comp_Kongresshaus_1_C.png" alt="couldnt load">
+                <p>Mit Betonung einer geometrischen Ordnung und die Vorliebe für zeitgemässe Materialien wie <br>Stahl und Glas.</p>
+            </div>
+
+            <div class="wall top" data-side="top">
+                <img class="full-img img-5" src="bilder/Comp_Wohnblock_1.png" alt="couldnt load">
+            </div>
+
+            <div class="wall bottom" data-side="bottom">
+                <img class="full-img img-6" src="bilder/Comp_Kongresshaus_Skulptur_c.png" alt="couldnt load">
+                <p>In den 1960er- und 1970er-Jahren erlebte die Stadt eine Phase intensiver Modernisierung.</p>
+            </div>
+
+        </div>
+    </div>
+
+     <div class="overlay">
+        <canvas id="canvas"></canvas>
+        <div class="box">
+          <div class="section top-over">
+            <h1 class="h1-1">Biel/</h1>
+            <h1 class="h1-2">Brutalismus <br>Bienne</h1>
+          </div>
+
+            <div class="section two-over">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    let zRotation = -20;
+    let yRotation = 30;
+    let xRotation = 20;
+
+    const room = document.getElementById("room");
+    const overlay = document.querySelector(".overlay");
+    const scene = document.querySelector(".scene");
+    const topOverSection = document.querySelector(".section.top-over");
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    let targetXRotation = xRotation;
+    let targetYRotation = yRotation;
+    let targetZRotation = zRotation;
+
+    function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        drawTopLine();
+    }
+
+    function drawTopLine() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.moveTo(canvas.width * 0.75, canvas.height / 7);
+        ctx.lineTo(canvas.width, 5);
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 2; 
+        ctx.stroke();
+    }
+
+    overlay.addEventListener("scroll", () => {
+        let scrollY = overlay.scrollTop;
+        let maxScroll = overlay.scrollHeight - overlay.clientHeight;
+        let scrollPercent = Math.min(Math.max(scrollY / maxScroll, 0), 1);
+
+        // Adjust scene opacity
+        let sceneOpacity = Math.min(Math.max(scrollPercent / 0.2, 0.1), 1);
+        scene.style.opacity = sceneOpacity;
+
+        // Fade out background of .top-over when scrolling starts
+        let bgOpacity = Math.max(1 - scrollPercent * 10, 0);
+        topOverSection.style.background = `rgba(227, 227, 227, ${bgOpacity})`;
+
+        // Adjust 3D rotation based on scroll
+        targetYRotation = 30 + scrollY * 0.1;
+        targetZRotation = -20 + scrollY * 0.05;
+        targetXRotation = 20 + scrollY * 0.001;
+    });
+
+    const smoothRotate = () => {
+        xRotation += (targetXRotation - xRotation) * 0.1;
+        yRotation += (targetYRotation - yRotation) * 0.1;
+        zRotation += (targetZRotation - zRotation) * 0.1;
+
+        room.style.transform = `rotateX(${xRotation}deg) rotateZ(${zRotation}deg) rotateY(${yRotation}deg)`;
+
+        requestAnimationFrame(smoothRotate);
+    };
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+    smoothRotate();
+});
+
+        </script>
+        
+        
+</body>
+</html>

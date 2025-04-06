@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Seite</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/hover.css">
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        user-select: none;
+        background-color: #e3e3e3;
+      }
+
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        color: black;
+        text-align: center;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 1.8s ease-in-out;
+      }
+
+      .subtitle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        color: black;
+        text-align: center;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 1.8s ease-in-out;
+      }
+
+      .scene {
+        opacity: 0;
+        perspective: 10vw;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 1.2s ease-in-out;
+      }
+
+      .room {
+        width: 70vh;
+        height: 70vh;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateZ(-20deg) rotateY(30deg);
+        transition: transform 0.1s linear;
+      }
+
+      .wall {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #e3e3e3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .front  { transform: translateZ(35vh) rotateY(-180deg); }
+      .back   { transform: translateZ(-35vh); }
+      .right   { transform: translateX(-35vh) rotateY(90deg); }
+      .left  { transform: translateX(35vh) rotateY(-90deg); }
+      .top    { transform: translateY(-35vh) rotateX(-90deg); }
+      .bottom { transform: translateY(35vh) rotateX(90deg); }
+
+
+       /* Scrollable Overlay */
+       .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 300vh;
+            overflow-y: scroll;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .box {
+            position: relative;            
+            margin: 0;
+            width: 100vw;
+            height: 90vh;
+            background: #e3e3e300;
+            pointer-events: all;
+        }
+
+        .section.bottom-right{
+          background: #e3e3e3;
+          position: absolute;
+          width: 60vw;
+          height: 30vh;
+          right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="title" id="title">
+        <h1>Brutalismus Biel/Bienne</h1>
+    </div>
+
+    <div class="subtitle" id="subtitle">
+        <h2>Konzept einer dreidimensionalen Webseite, zur Nutzung räumlicher Interaktivität.
+            Realisiert durch Leandro Lendi Musio, mithilfe der Dozentin Hanna Züllig.
+        </h2>
+    </div>
+
+    <div class="scene">
+        <div class="room" id="room">
+            <div class="wall front kongresshaus" data-side="front">front
+                <p>Durch den wirtschaftlichen und demografischen Wandel gewannen schweizweit brutalistische Bauten zeitgenössisch an Bedeutung.</p>
+                <h1 class="link-1">Haus</h1>
+                <img class="full-img img-0" src="bilder/Comp_Kongresshaus_Flügel_1_C.png" alt="couldnt load">
+            </div>
+
+            <div class="wall left" data-side="left">left
+                <p>Das von Max Schlup designte Kongresshaus in Biel/Bienne ist ein Wahrzeichen der Stadt und <br>steht führ den wirtschaft- <br>lichen Aufschwung <br>der Stadt im 20.<br>Jahrhundert.</p>
+                    <h2>1966</h2>
+                    <h1 class="link-1">Kongress</h1>
+                    <img class="full-img img-1" src="bilder/Comp_Kongresshaus_2_C.png" alt="couldnt load">
+                    <img class="small-img img-2" src="bilder/Comp_Kongresshaus_Eingang_C.png" alt="couldnt load">
+            </div>
+
+            <div class="wall right kongresshaus" data-side="right">right
+                <div class="line"></div>
+                <p>Max Schlup besuchte in Biel die Grundschulen, lernte Hochbauzeichner und studierte von 1933 bis 1939 Architektur am Technikum in Biel. 1948 eröffnete er dort auch sein eigenes Architekturbüro und seine Bauten definiertennoch heute das Stadtbild Biels <br>und die Architekturgeschichte der Region.</p>
+                    <h2> -09.06.1917<br> † 11.02.2013</h2>
+                    <h1 class="link-2">Max Schlup</h1>
+                    <img class="full-img img-0" src="bilder/Comp_Kongresshaus_Flügel_2_C.png" alt="couldnt load">
+            </div>
+
+            <div class="wall back" data-side="back">back
+                <div class="line"></div>
+                <img class="full-img img-4" src="bilder/Comp_Kongresshaus_1_C.png" alt="couldnt load">
+                <p>Mit Betonung einer geometrischen Ordnung und die Vorliebe für zeitgemässe Materialien wie <br>Stahl und Glas.</p>
+            </div>
+
+            <div class="wall top" data-side="top">top
+                <img class="full-img img-5" src="bilder/Comp_Wohnblock_1.png" alt="couldnt load">
+                <h1 class="link-3">Biel/<br>Bienne</h1>
+            </div>
+
+            <div class="wall bottom" data-side="bottom">bottom
+                <img class="full-img img-6" src="bilder/Comp_Kongresshaus_Skulptur_c.png" alt="couldnt load">
+                <p>In den 1960er- und 1970er-Jahren erlebte die Stadt eine Phase intensiver Modernisierung.</p>
+            </div>
+
+        </div>
+    </div>
+
+     Scrollable Overlay
+     <div class="overlay">
+        <div class="box">
+          <div class="section bottom-right">
+            <p><strong>Bottom Right Box</strong></p>
+            Brutalism is an architectural style that emerged in the mid-20th century, characterized by its bold, raw, and often imposing concrete structures. The style emphasizes functionality over form and is known for its use of rough, unfinished materials, particularly béton brut (raw concrete), creating an unembellished, industrial aesthetic. Brutalist buildings typically feature strong geometric shapes, heavy proportions, and a sense of permanence, with a focus on practicality rather than decorative elements. While controversial for its perceived harshness, Brutalism has gained appreciation for its unique, honest approach to architecture and urban design.          </div>
+        </div>
+    </div>
+
+    <script>
+    let zRotation = -20;
+    let yRotation = 30;
+    let isDragging = false;
+    let lastX, lastY;
+    let autoRotate = true;
+    const room = document.getElementById('room');
+
+    function animate() {
+        if (autoRotate && !isDragging) {
+            yRotation += 0.12;
+            zRotation -= 0.1;
+        }
+        room.style.transform = `rotateZ(${zRotation}deg) rotateY(${yRotation}deg)`;
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+/*    // Scroll event listener to control rotation
+window.addEventListener('scroll', () => {
+    autoRotate = false; // Disable auto-rotation when scrolling
+
+    let scrollY = window.scrollY;
+    let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    let scrollPercent = scrollY / maxScroll; // Normalize between 0 and 1
+
+    yRotation = 30 + scrollPercent * 360; // Rotate room based on scroll
+    zRotation = -20 + scrollPercent * 50; // Adjust Z rotation slightly
+
+    room.style.transform = `rotateZ(${zRotation}deg) rotateY(${yRotation}deg)`;
+});*/
+
+    const walls = document.querySelectorAll('.wall');
+    walls.forEach(wall => {
+        wall.addEventListener('click', () => {
+            const side = wall.getAttribute('data-side');
+
+            document.querySelector('.scene').style.opacity = 0;
+
+            setTimeout(() => {
+                switch (side) {
+                    case 'front':
+                        window.location.href = 'kongresshaus.html';
+                        break;
+                    case 'back':
+                        window.location.href = 'kongresshaus.html';
+                        break;
+                    case 'left':
+                        window.location.href = 'kongresshaus.html';
+                        break;
+                    case 'right':
+                        window.location.href = 'kongresshaus.html';
+                        break;
+                    default:
+                        window.location.href = 'kongresshaus.html';
+                }
+            }, 2000);
+        });
+    });
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.querySelector('.title').style.opacity = 1;
+        }, 100); //300
+
+        setTimeout(() => {
+            document.querySelector('.subtitle').style.opacity = 1;
+        }, 100); //5000
+
+        setTimeout(() => {
+            document.querySelector('.scene').style.opacity = 1;
+        }, 100); //12800
+
+        setTimeout(() => {
+            document.getElementById('title').style.opacity = 0;
+        }, 100); //3000
+
+        setTimeout(() => {
+            document.getElementById('subtitle').style.opacity = 0;
+        }, 100); //11000
+    });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube with Overlay</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background: #e3e3e3;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+        }
+
+        .scene {
+            perspective: 20vw;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .room {
+            width: 80vh;
+            height: 80vh;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(60vh) rotateX(-20deg) rotateY(30deg);
+            transition: transform 0.2s ease;
+        }
+
+        .wall {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #e3e3e3;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .front  { transform: translateZ(40vh); }
+        .back   { transform: translateZ(-40vh) rotateY(180deg); }
+        .left   { transform: translateX(-40vh) rotateY(90deg); }
+        .right  { transform: translateX(40vh) rotateY(-90deg); }
+        .top    { transform: translateY(-40vh) rotateX(-90deg); }
+        .bottom { transform: translateY(40vh) rotateX(90deg); }
+
+        /* Scrollable Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .box {
+            position: relative;            
+            margin: 0;
+            width: 100vw;
+            height: 90vh;
+            background: #e3e3e300;
+            pointer-events: all;
+        }
+
+        .section.top-left{
+          background: #e3e3e3;
+          position: absolute;
+          width: 30vw;
+          height: 60vh;
+        }
+
+        .section.bottom-right{
+          background: #e3e3e3;
+          position: absolute;
+          width: 60vw;
+          height: 30vh;
+          right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="room" id="room">
+            <div class="wall front">Front</div>
+            <div class="wall back">Back</div>
+            <div class="wall left">Left</div>
+            <div class="wall right">Right</div>
+            <div class="wall top">Top</div>
+            <div class="wall bottom">Bottom</div>
+        </div>
+    </div>
+
+    <!-- Scrollable Overlay -->
+    <div class="overlay">
+        <div class="box">
+          <div class="section top-left">
+            <p><strong>Top Left Box</strong></p>
+            <p>Brutalism is an architectural style that emerged in the mid-20th century, characterized by its bold, raw, and often imposing concrete structures. The style emphasizes functionality over form and is known for its use of rough, unfinished materials, particularly béton brut (raw concrete), creating an unembellished, industrial aesthetic. Brutalist buildings typically feature strong geometric shapes, heavy proportions, and a sense of permanence, with a focus on practicality rather than decorative elements. While controversial for its perceived harshness, Brutalism has gained appreciation for its unique, honest approach to architecture and urban design.</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="section bottom-right">
+            <p><strong>Bottom Right Box</strong></p>
+            Brutalism is an architectural style that emerged in the mid-20th century, characterized by its bold, raw, and often imposing concrete structures. The style emphasizes functionality over form and is known for its use of rough, unfinished materials, particularly béton brut (raw concrete), creating an unembellished, industrial aesthetic. Brutalist buildings typically feature strong geometric shapes, heavy proportions, and a sense of permanence, with a focus on practicality rather than decorative elements. While controversial for its perceived harshness, Brutalism has gained appreciation for its unique, honest approach to architecture and urban design.          </div>
+        </div>
+    </div>
+
+    <script>
+    let xRotation = -20;
+    let yRotation = 30;
+    let isDragging = false;
+    let lastX, lastY;
+    let autoRotate = true;
+    const room = document.getElementById('room');
+
+    function animate() {
+        if (autoRotate && !isDragging) {
+            yRotation -= 0.06;
+        }
+        room.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.style.opacity = 1;
+            }, 300);
+        });
+        </script>
+</body>
+</html>
