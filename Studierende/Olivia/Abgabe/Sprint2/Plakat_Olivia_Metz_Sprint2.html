@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plakat - Olivia Metz</title>
+</head>
+
+<body>
+
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+        font-family: 'Roboto Condensed';
+        margin: 10px;
+        height: 100vh;
+        align-content: center;
+    
+    }
+    
+    .inhalt {
+        display: inline-block;
+        text-align: center;
+        font-size: 11vh;
+        margin: 0px;
+        margin-left: 1vh;
+        margin-right: 1vh;
+        border: 0px;
+        padding: -5px, 5px, -5px, 5px;
+        background-color: rgb(255, 255, 255);
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+
+        color: rgb(24, 24, 24);
+        line-height: 0.9;
+    }
+
+
+@keyframes rechtshoch {
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(8vh, -5vh);}
+}
+
+@keyframes linkshoch {
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(-5vh, -5vh);}
+}
+
+@keyframes linksunten {
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(-12vh, 3vh);}
+}
+
+@keyframes rechtsunten {
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(5vh, 5vh);}
+}
+
+@keyframes blinken {
+    0%, 100% { color: white; }
+    80% { color: black; }
+}
+
+
+
+.rechtshoch { animation: rechtshoch 11s ease-out 4s forwards; }
+.linkshoch { animation: linkshoch 9s ease-out 6s forwards; }
+.linksunten { animation: linksunten 10s ease-out 5s forwards; }
+.rechtsunten { animation: rechtsunten 11s ease-out 4s forwards; }
+
+.inhalt:hover {
+    
+    transform: translate(0, 0); /* Bringt den Text zurück */
+    transition: transform 10s ease-out;
+    animation: none; /* Stoppt die vorherige Animation */
+        }
+
+    .zeile {
+        display: flex;
+        direction: row;
+        justify-content:right;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+        height: calc((100vh - 20px)/9 );
+
+    }   
+
+    .balken {
+        height: calc((100% - 1vh));
+        background-color: rgb(50, 50, 50);
+        flex-grow: 1;
+        
+    }
+
+    .pause{
+        background-color: white;
+        width: 1vh;
+    }
+
+
+
+
+
+    .l1{flex-basis: 10vw;}
+    .r1{flex-basis: 70vw;}
+    .l2{flex-basis: 50vw;}
+    .r2{flex-basis: 40vw;}
+    .l3{flex-basis: 25vw;}
+    .m3{flex-basis: 20vw;}
+    .r3{flex-basis: 60vw;}
+    .l4{flex-basis: 70vw;}
+    .r4{flex-basis: 40vw;}
+    .l5{flex-basis: 50vw;}
+    .m5{flex-basis: 30vw;}
+    .r5{flex-basis: 10vw;}
+    .l6{flex-basis: 20vw;}
+    .m6{flex-basis: 40vw;}
+    .r6{flex-basis: 30vw;}
+    .l7{flex-basis: 70vw;}
+    .r7{flex-basis: 50vw;}
+    .l8{flex-basis: 30vw;}
+    .r8{flex-basis: 20vw;}
+
+
+    @media screen and (min-width:1200px){
+.rand {height: 7vh;}
+.gebrauch {height: calc((84vh)/7 );}
+
+.inhalt {
+    font-size: 14vh;
+}
+}
+
+@media screen and (max-width:600px){
+.rand {height: 15vh;}
+.gebrauch {height: calc((69vh)/7 );}
+
+.inhalt {
+    font-size: 9vh;
+}
+@keyframes rechtshoch {
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(8vh, -4vh);}
+}
+
+@keyframes linksunten {
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(-8vh, 3vh);}
+}
+
+@keyframes rechtsunten {
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(4vh, 3vh);}
+}
+}
+
+
+</style>
+<body>
+
+
+<div class="zeile rand">
+    <div class="balken l0"></div>
+    <div class="pause"></div>
+    <div class="balken m0"></div>
+    <div class="pause"></div>
+    <div class="balken r0"></div>
+</div>
+<div class="zeile gebrauch">
+    <div class="balken l1"></div>
+    <h2 class="inhalt rechtshoch">WHERE </h2>
+    <div class="balken r1"></div>
+</div>
+<div class="zeile gebrauch">
+    <div class="balken l2"></div>
+    <h2 class="inhalt rechtshoch">THERE </h2>
+    <div class="balken r2"></div>
+</div>
+<div class="zeile gebrauch">
+    <div class="balken l3"></div>
+    <h2 class="inhalt linkshoch">IS </h2>
+    <div class="balken m3"></div>
+    <h2 class="inhalt linksunten">NO </h2>
+    <div class="balken r3"></div>
+</div>
+<div class="zeile gebrauch">
+    <div class="balken l4"></div>
+    <h2 class="inhalt rechtshoch">ORDER </h2>
+    <div class="balken r4"></div>
+</div>
+<div class="zeile gebrauch">
+    <div class="balken l5"></div>
+    <h2 class="inhalt rechtsunten">THERE </h2>
+    <div class="balken m5"></div>
+    <h2 class="inhalt rechtsunten">IS </h2>
+    <div class="balken r5"></div>
+</div>
+<div class="zeile gebrauch">
+    <div class="balken l6"></div>
+    <div class="pause"></div>
+    <div class="balken m6"></div>
+    <div class="pause"></div>
+    <div class="balken r6"></div>
+</div>
+<div class="zeile gebrauch">
+    <div class="balken l7"></div>
+    <h2 class="inhalt linksunten blinken">CHAOS </h2>
+    <div class="balken r7"></div>
+</div>
+<div class="zeile rand">
+    <div class="balken l8"></div>
+    <div class="pause"></div>
+    <div class="balken r8"></div>
+</div>
+<div class="abstand"></div>
+
+
+
+
+</body>
+
+
+
+
+</html>
