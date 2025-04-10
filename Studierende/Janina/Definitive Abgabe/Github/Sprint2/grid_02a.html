@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mein Grid</title>
+<link rel="stylesheet" href="grid_02a.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+/* Portfolio Titel */
+.portfolio-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 80vw;
+    /* Responsiv */
+    max-width: 600px;
+    /* Optional Max */
+    height: auto;
+    color:white;
+  }
+
+
+.cls-2-portfolio {
+    font-size: clamp(1.0rem, 8vw, 6rem);
+    font-weight: 500;
+    font-weight: bold;
+    color: white;
+    text-shadow:
+      -2px -2px 0 black,
+       2px -2px 0 black,
+      -2px  2px 0 black,
+       2px  2px 0 black,
+       0px  -2px 0 black,
+       0px   2px 0 black,
+      -2px  0px 0 black,
+       2px  0px 0 black;  
+}
+
+
+/* Janina */
+.cls-janina {
+     position: relative;
+     grid-column: 2 / 3;
+    grid-row: 2 /3 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-weight: 700;
+    pointer-events: auto; /* für Hover */
+}
+.janina {
+    writing-mode: tb-rl;
+    font-size: clamp(1.5rem, 8vw, 5rem);
+    font-weight: 700;
+    color: red;
+}
+
+.janina:hover {
+  color: white;
+  background-color: rgb(255, 0, 0);
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 0 20px red;
+}
+
+
+
+/* Jakob */
+.jakob {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 3 / 5;
+    grid-row: 4 / 5;
+    width: 80vw;
+    max-width;
+    height: auto;
+}
+.cls-jakob {
+    color: #1d1d1b;
+    display: flex;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 6vw, 5rem);
+    letter-spacing: -.02em;
+    color: black;
+  -webkit-text-stroke: 1px white;
+}
+.jakob:hover {
+  color: white;
+  background-color: rgb(255, 0, 0);
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 0 20px red;
+}
+
+
+/* Kickweb */
+.kickweb {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    width: auto;
+    height: auto;
+}
+.cls-1-kickweb {
+    fill: #1d1d1b;
+    font-weight: 500;
+    letter-spacing: .02em;
+    font-size: clamp(1.5rem, 8vw, 5rem);
+    color: black;
+  -webkit-text-stroke: 1px white;
+}
+
+
+
+/* HSLU*/
+.text-hslu {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 5 / 6;
+    grid-row: 3/ 4;
+    width: auto;
+    height: auto;
+    font-size: 5vw;
+    font-weight: bold;
+    color: white;
+}
+.cls-1-hslu {
+    fill: #1d1d1b;
+    font-size: clamp(1.5rem, 8vw, 5rem);
+    font-weight: 500;
+    letter-spacing: -.02em;
+    color: white;
+    text-shadow:
+      -2px -2px 0 black,
+       2px -2px 0 black,
+      -2px  2px 0 black,
+       2px  2px 0 black,
+       0px  -2px 0 black,
+       0px   2px 0 black,
+      -2px  0px 0 black,
+       2px  0px 0 black;
+}
+/* Digital Ideation */
+.digital-ideation {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 4 / 4;
+    grid-row: 2 / 4;
+    width: auto;
+    height: auto;
+    
+}
+.cls-1-digital {
+    writing-mode: tb-rl;
+    fill: #1d1d1b;
+    font-weight: 500;
+    font-size: clamp(1.0rem, 4vw, 4rem);
+    color: black;
+  -webkit-text-stroke: 1px white;
+}
+/* Year 2025*/
+.year2025 {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    width: auto;
+    height: auto;
+}
+.cls-1-2025 {
+  font-weight: 500;
+  font-size: clamp(1rem, 7vw, 5rem);
+  color: black;
+  -webkit-text-stroke: 1px white;
+}
+
+</style>
+</head>
+
+<body>
+<div class="grid">
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+  <div class="dunkelgrau"></div>
+  <div class="hellgrau"></div>
+</div>
+<div class="grid-text"> 
+  <!--Portfolio-->
+  <div class="portfolio-title cls-2-portfolio"> PORTFOLIO </div>
+  
+  <!--Janina-->
+  <div class="cls-janina ">
+    <div class="janina"> Janina </div>
+  </div>
+  
+  <!--Jakob-->
+  <div class="jakob">
+    <div class="cls-jakob"> Jakob </div>
+  </div>
+  
+  <!--Kiweb-->
+  
+  <div class="kickweb">
+    <div class="cls-1-kickweb "> Kickweb </div>
+  </div>
+  
+  <!--HSLU-->
+  <div class="text-hslu">
+    <div class="cls-1-hslu">HSLU</div>
+  </div>
+  
+  <!--Digital Ideation-->
+  <div class="digital-ideation">
+    <div class="cls-1-digital"> Digital Ideation </div>
+  </div>
+  
+  <!--Year 2025-->
+  <div class="year2025">
+    <div class="cls-1-2025"> 2025 </div>
+  </div>
+</div>
+<div class="grid-container">
+  <div class="scalesvg"> 
+    <!---svg--> 
+  </div>
+</div>
+</body>
+</html>
